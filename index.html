@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es"> <head>
+<meta charset="UTF-8">
+ <title>Bildschirmwechsel</title>
+
+
+<script>
+window.onload = function () {
+
+
+  const isMobileDevice = /Android|iPhone|iPad/i.test(navigator.userAgent);
+  const screenWidth = window.innerWidth;
+
+  if (isMobileDevice || screenWidth <= 1024) {
+    window.location.href = "DieKleineSeite.html";
+  } else {
+    window.location.href = "DieGrosseSeite.html";
+  }
+}
+</script>
+ </head>
+ <body>
+<p></p>
+</body>
+ </html>

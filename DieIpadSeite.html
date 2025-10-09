@@ -1,390 +1,437 @@
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|emboss">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat&effect=emboss">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handlee|Inconsolata&effect=3d-float">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family='Barlow Condensed'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|emboss" />
+    <script src='https://kit.fontawesome.com/19cb54bd6e.js' crossorigin='anonymous'></script>
+    <title>Exp256Sauber</title>
 
-    <script src="script.js"></script>
-
-
-    <title>IpadSeite</title>
-
+<!--sigo sin cambiar iframe-->
     <style>
-    :root{
-         --suave1: #eeede6;
-         --suave2: #e73304;
-         --gelb0:  #FBE8A6;
-     --gelb: #FBE8A6;
-     --turquesa: #AFEEEE;
-     --palegold: #EEE8AA;
-     --colorX: #e7e3d4;
-     --colorHeader:#e6e2d8;
-     --colorNav:#FAEBD7; /* #FAF0E6; */
 
 
-     }
 
 
-    * {
-  box-sizing: border-box;
-    }
-
-.header {
-  display:flex;
-  background-color: var(--colorX);
-  margin-top:4px;
-  padding-top: 4px;
-  text-align: center;
-  height:14vh;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  align-items:center;
+body{
+ background-color: #e3e7e8;
+  font-family:'Open Sans', sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  height:auto;
 }
-.nav{
-display:flex;
-margin-left:4px;
- height:6vh;
-background-color: var(--colorNav);
-}
-.nav div:nth-of-type(1) {flex-grow: 1;}
-.nav div:nth-of-type(2) {flex-grow: 1;}
-.nav div:nth-of-type(3) {flex-grow: 1;}
-.nav div:nth-of-type(4) {flex-grow: 6;}
-.nav div:nth-of-type(5) {flex-grow: 1;}
-.nav div:nth-of-type(6) {flex-grow: 1;}
-
-.footer {
-display:flex;
-
-  padding: 10px;
-  padding-left: 10px;
-  <!--text-align: left;
-  align-items:center;-->
- box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
- margin-top:10px;
- margin-bottom:10px;
-}
-.footer div:nth-of-type(1) {flex-grow: 1;}
-.footer div:nth-of-type(2) {flex-grow: 5;}
-.footer div:nth-of-type(3) {flex-grow: 1;}
-
-
-.ersterTitel{
-font-family: "Sofia", Palatino,sans-serif;
-font-size: 26px;
-text-shadow:3px 3px 3px #3d4749;
-text-align: center;
-color: brown;
-align-items:center;
-}
-.unterTitel{
-font-size:20px;
-text-shadow:1px 1px 1px #3d4749;
-font-family: 'Caveat',Palatino;
-font-weight:bolder;
-text-align: center;
-}
-.texto::first-letter {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Arial Narrow', Arial, sans-serif;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: brown;
-
-}
-#contenido{
-    height:auto;
-    width:600;
-   font-family:'Georgia','Segoe UI', Tahoma, Verdana, sans-serif;
-   font-size: 24px;
-   color: rgb(7, 27, 78);
-   padding:10px 10px;
-   margin-left:26px;
-   margin-right: 26px;
-   text-align: center;
-   word-wrap:normal;
-}
-
-.epigrafe{
-    padding:30px 30px;
-   text-align: justify;
-   text-align: center; /*right;*/
-   font-family:Garamond, "Times New Roman", Times, serif;
-   font-size: 3vw;
-   line-height: 94%;
-   overflow: auto;
-   white-space: wrap;
-}
-
-.Schild{
-    font-family: 'Caveat';
-    font-weight:bolder;
-    font-size:36px;
-    text-align: center;
-}
-.sobremouse:hover {
-  cursor: pointer;
-  opacity:0.25;
-}
-    /*.........................................*/
-    dropbtn {
-  background-color:#3498DB ;
-  color: white;
-  padding: 2px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  margin-bottom:2px;
-  margin-left:10px;
-<!-- border-radius: 2px;-->
+:root {
+  --breite: 82%;
+  --stoff: 10px;
+  --linken: 10px;
+  --anchoBody:1000px;
+- --cafeLeche: #d8C3A5;             /*container*/
+  --bodyColor: #A4B3B6;
+  --verdeObs:#576777;
 
 }
 
-.dropbtn:hover, .dropbtn:focus {
-  background-color: aliceblue;
+
+.container{
+    display:grid;
+    background-color: var(--cafeLeche);
+
+    width:clamp(600px,110vh,980px);
+    height:clamp(400px,88vh,1000px);
+    resize:both;
+
+  margin-left:70px;
+    border-style:groove;
+    border-width:10px 4px;
+
+    grid-template-columns: 220px 6fr 1px;  /*achtung!Es ist notwendig, zu berechnen!*/
+    padding-left: 24px;
+    padding-right: 10px;;
+    padding-bottom:10px;
+    gap:1em;
+    grid-template-rows:100px repeat(3,1fr);;
+    box-shadow: 2px 2px 10px rgba(220, 227, 16, 0.4);
+   justify-items:stretch;
+   justify-content:center;
+
+    top:50vh;
+    left:50vw;
+ transform:translate(60px,20px);
+
+}
+.container>div{
+
+border: 4px groove rgb(196, 192, 192);
+background-color:white;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+.linkesMenu{
+background-color: rgb(146, 172, 226);
+width:220px;
+height:94%; /*obs*/
+margin-top:4px;
+margin-left:1px;
+padding-left:1px;
+grid-row-start: 1;
+grid-row-end: 6;        /*obs*/
+grid-column-start:1;
+grid-column-end:2;
+
+font-family:Georgia, Times, 'Times New Roman', serif, 'Arial Narrow', Arial, sans-serif;
+font-size: 16px;
+font-weight:bold;
+color:#060606;
+overflow-y: scroll;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  background-image: linear-gradient( 111.9deg,  rgba(248,248,240,1) 80.9%,
-  rgba(187,187,187,1) 116.8% );
-<!--  background-image: url("arc/papelAgua0.jpg");-->
-  display:flex;          <!--achtung-->
-   align-items:center;
-  font-family:'Barlow Condensed';
-  text-shadow:3px 3px 3px #ababab;
-  font-size:3vw;
-  font-weight:bold;
-  min-width: 160px;
-  overflow: auto;
-<!--  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);-->
-  z-index: 1;
+.texto{
+margin:2px 2px;
+padding:6px 6px;
+padding-left:2px;
+color:#cfcfd5;
+grid-row-start: 2;
+grid-row-end: 7;
+overflow-y: hidden;
+
+border-style:solid;
+border-width:10px 4px;
+height:100%;
+width: 100%;
+overflow-x: hidden;  /*Gut!*/
+resize:both;       /*Gut!*/
 }
 
-.dropdown-content a {
-  color: #154779;
-  padding: 12px 16px;
-  text-decoration: none;
-  background-color:transparent;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
 
 
-#menuButton {
-<!--  padding: 10px 20px;-->
-  font-size: 24px;
-  cursor: pointer;
+/*-----------------------------*/
+/*#LM :hover{*/
+#listaMP :hover{
+    color: red;
+    transform:scale(1.03);  /*------obs!----*/
+    cursor:pointer;
 }
-#menuButton i {
-  pointer-events: none; /* <<< Esto es lo importante */
+#listaRel :hover{
+    color: red;
+    transform:scale(1.03);  /*------obs!----*/
+    cursor:pointer;
 }
-    /*.........................................*/
-.img {
-<!--  border: 1px solid #ddd;-->
-<!--  border-radius: 4px;-->
-  padding: 5px;
+
+#listaCV :hover{
+    color: red;
+    transform:scale(1.03);  /*------obs!----*/
+    cursor:pointer;
 }
-.hause {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    <!--box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-     rgba(0, 0, 0, 0.22) 0px 10px 10px;-->
+
+
+ li:hover{
+    color: red;
+    /*transform:scale(1.1);*/
+    cursor:pointer;
 }
-.buch {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+li a {
+text-decoration:none;
+  color: white;      /*hotpink;*/
 }
+
+
+
+/*-----------------------------*/
+.sieben{
+
+grid-row:1/8;
+grid-column:3/4;
+width:1px;
+height:50%;
+}
+
+
+.element5{
+background-color:#1e7296;
+color:#55558a;
+grid-row-start: 1;
+grid-row-end: 2;
+overflow-y: scroll;
+width:120px;
+height:60px;  /*obs*/
+margin-bottom:10px;
+margin-left:10px;
+margin-top:10px;
+}
+
 .ramka{
 
         width:100%;
-        height:68vh;
+        height:100%;
+        font-family:font-family, Georgia, Times, 'Times New Roman', serif, Arial, sans-serif;
+        ;font-size:30px;
+        background-image:url('arc/papelAgua0.jpg');
+        background-position: left top;
+        resize:both;
+        background-size: cover;
+        box-shadow: rgba(0, 0, 0, 0.25)  14px 28px,
+            rgba(0, 0, 0, 0.22) 10px 10px;
+        }
+    /*----------------------------------------*/
 
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+#fenster{
+    width:200px;
+    height:180px;
+    overflow-y: scroll;
+    text-overflow:ellipsis;
+    text-align:center;
 }
-.texto{
+.btn {
+  background-color: white;
+  border: none;
+<!--  padding: 16px 32px;-->
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+}
+.index {
 
-height: auto;
-width:100%;
-font-family:'Palatino','Segoe UI', Tahoma, Verdana, sans-serif;
-font-size: 30px;
-color: rgb(7, 27, 78);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color:white;
+    padding-top:4px;
+    text-align:center;
 
-padding:10px 10px;
-margin-top:20px;
-margin-left:10px;
-margin-right: 10px;
-text-align: center;
-word-wrap:normal;
-<!--background-color:red;  funciona-->
 }
 
- #bigornia {
-      width: 40px;
-      height: auto;
-      transition: opacity 0.8s ease;
-    }
-</style>
+.ikonUser{
+    display:flex;
+    width:34px;
+    height:36px;
+    margin-top:2px;
+    /*border: 1px solid white;*/
+    background-color: #1e7296;
+
+}
+
+#bucher {
+  display: none;
+position: absolute;
+
+  <!--background: #e2e8d8;
+background: linear-gradient(90deg, rgba(226, 232, 216, 0.43) 0%, rgba(204, 214, 201, 0.34) 59%, rgba(129, 145, 135, 0.35) 100%);
+-->
+
+  background-image:url("arc/vidrio1.jpg");
+  background-size:cover;
+background-color: rgba(240,240,240,0.86);
+<!--  0.7  tenía 0.85-->
+
+background-blend-mode: overlay;
+border-radius: 12px;
+border: 1px solid rgba(255,255,255,0.4);
+
+  max-width: 160px;
+  max-height:200px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+               rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  padding: 12px 16px;
+  margin-top:70px;
+  margin-left:64px;
+  font-family: 'Rancho', sans-serif;
+  font-size: 16px;
+
+  color:#264e85;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  z-index: 1;
+}
+
+    </style>
+<!-- .............................. -->
 </head>
+<body style="background-color:#a2a7a8">
+
+    <div><!--.  🔔 🔒 -->
 
 
-<body style="background-color:#f0f0e9;">
 
-<section>
+        <div class="container" style="background-color:#9dacb3;">
+        <div class="element5" id="info5" style="display:flex; background-color:
+                white; margin-bottom:2px; padding-left:20px;
+                padding-top:10px;text-align:left;
+                width:96%;overflow:hidden">
 
-    <header class="header" style="background-color:#E1DBCB;;">
-        <!--e6e2d8,F1ECD9-->
-            <h1></h1>
-            <p class="ersterTitel">Ipad Seite</p>
-             <p class="epigrafe"><i>María Papel era así:
-     prefería arrancarse una espina del corazón,
-     a que arrancarse una idea del corazón.</i></p>
-    </header>
-<br/>
-
-    <hr/>
+           <button  class="btn"  id="mpLista" onclick="hauptMenu55()"><i class='fas fa-bars' id = "menuIkon"
+                style="font-size:34px;color:blue; padding-top:10px;outline:none;margin-bottom:10px;
+                margin-right:4px; cursor:pointer;
+             ;"></i></button>
 
 
-    <nav class="nav" style="background-color:#efefef;">
-
-        <div class="hause" style="background-color:Cornsilk;">   <!--home, bars-->
-                <div class="dropdown">
-                <button id="menuButton" style="margin-left:8px;" onclick="myFunction()" class="dropbtn">
-                <i class='fas fa-bars'
-                style='font-size:20px;color:blue; style="background-color:Cornsilk;
-               '></i>
-                </button>
-            <br/>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="arc/Einleitung.html" target="iframe_a">Prólogo</a>
-                    <a href="arc/cap1.html" target="iframe_a">Acerca</a>
-                    <a href="arc/cap2Kort.html" target="iframe_a">Don Alfonso</a>
-                    <a href="arc/cap9.html" target="iframe_a">María</a>
-                    <a href="arc/cap14.html" target="iframe_a">Escuela de niñas</a>
-                    <a href="arc/cap19.html" target="iframe_a">Felipe Asís</a>
-                </div>
-                </div>   <!--dropdown-->
-        </div>   <!--home, bars-->
-
-
-        <div class="buch" style="background-color:Cornsilk;">
-            <i class="fas fa-book-open reader" style="font-size:20px;color:blue;
-            background-color:#efefef;cursor:pointer;"></i>
-        </div>
-        <div style="background-color:khaki;"></div>
-        <div style="background-color:AntiqueWhite;"></div>
-        <div style="background-color:lightgrey;"></div>
-        <div style="background-color:lightgrey;"></div>
-    </nav>
-<hr/>
-
-</section>
-        <hr style="border:2px;background-color:green;color:green;"/>
-
-<hr/>
-<br/>
-<iframe class="ramka" src="arc/Einleitung.html" name="iframe_a"  title="Iframe Example"></iframe>
-
+             <button id ="usuario" onclick = "hauptInfo()" style="background-color:white;
+        border:none;cursor:pointer;">
+               <img class = "ikonUser"  id = "ikono1" src="user(22)-64.jpg" alt="usu"
+                    style="width:26px; height:26px;
+                    padding-top:4px;padding-left:1px;background-color:white" >
+             </button>
 
 <script>
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+let veces = 0;
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
+function hauptMenu55() {
+    const n = document.getElementById("num");
+    const ikon = document.getElementById("menuIkon");
+
+    const x = document.getElementById("listaRel");
+    const y = document.getElementById("listaCV");
+    const z = document.getElementById("listaMP");
+    const ifr = document.getElementById("myIFrame");
+
+    // Ciclo de 1 a 3
+    veces = (veces % 3) + 1;  //primero—> (0%3)+1=1;
+
+    // Ocultar todos
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "none";
+
+    // Mostrar el correspondiente
+    switch (veces) {
+        case 1:
+            x.style.display = "block";
+            x.style.visibility = "visible";
+            n.innerHTML = "1";
+            ikon.style.color = 'blue';
+            ifr.src = "rel/intro.html";
+            //fenster.style.backgroundImage = "url('rel/ZweiEnten.jpg')";
+            fenster.style.backgroundColor = "#E7E3D4";
+            break;
+        case 2:
+            y.style.display = "block";
+            y.style.visibility = "visible";
+            n.innerHTML = "2";
+            ikon.style.color = '#bd261e';
+            ifr.src = "vk/proemio.html";
+            break;
+        case 3:
+            z.style.display = "block";
+            z.style.visibility = "visible";
+            n.innerHTML = "3";
+            ikon.style.color = '#16f756';
+
+            ifr.src = "arc/Einleitung.html";
+            fenster.style.backgroundImage = "url('arc/MP6.jpg')";
+            antwort = true;
+            break;
     }
+}
+		//achtung!
+// 🚀 Al cargar la página, activar el primer menú
+document.addEventListener("DOMContentLoaded", () => {
+  hauptMenu55();
+});
+</script>
+<!---->
+
+<!---->
+<script>
+function mpfigura() {
+
+    const x = document.getElementById("MP1");
+    const y = document.getElementById("listaMP");
+
+
+if((x.style.display === "none")){         //si MP no se ve
+    y.style.display="none";
+    x.style.display = "block";
+    x.style.visibility = "visible";
   }
+}
+ </script>
+
+<!---->
+
+
+<button  onclick="pluma()" style=" border-style: none;margin-left:20px;background-color:
+                white;" ><i class="fas fa-book-open reader"
+    style="font-size:32px;color:#81969c;margin-top:6px; cursor:pointer;"></i></button>
+
+            <p class="pluma-content" id="bucher" style="display:'none'">
+                  <span style="padding-left:20px; text-align:center;font-variant: small-caps;
+  font-weight:bold;color:#264e85;">Publicaciones</span><br/>
+
+
+          <br/>"Bosquejo de Otoño", 1977,
+           isbn 91-85242-24-1, ©isbn 0347-5360
+           Immigrantinstitutet<br/>
+
+	   <br/>"Cuentos en el Exilio", 1980, Invandrarförlag<br/>
+	   <br/>"Gugula no quiere dormir", 1987,  ©isbn 91-970842-0-4, Latinska förlaget<br/>
+	   <br/>"La olla del tiempo",  ©isbn 91-970842-2-0<br/> Latinska förlaget, 1989<br/>
+	   <br/>"El Círculo de Venus", del I, 2004, ©ISBN 978-91-519-1289-9,	Förlaget Voiguevoe<br/>
+	   <br/>"El Círculo de Venus", juni 2005, del II, ©ISBN 978-91-519-1290-5, Förlaget Voiguevoe<br/>
+       <br/>"El Círculo de Venus", del III, ©ISBN 978-91-519-1291-2, Förlaget Voiguevoe<br/>
+       <br/>"El Círculo de Venus", del IV, ©ISBN 978-91-519-1292-9,Förlaget Voiguevoe<br/>
+       <br/>"Una vaga complicidad”, 2012, 306 sidor;© 91-974817-5-0 Förlaget Voiguevoe. <br/>
+       <br/>"Mata de penas", 2014; ©isbn 978-91-639-4403-1.Förlaget Voiguevoe<br/>
+
+       <br/>"La casa de los Uribes” 2017 ©isbn 978-91-639-2974-8, Förlaget Voiguevoe <br/>
+       <br/>"Breve historia de María Papel" I ©isbn 978-91-639-4401-7 Förlaget Voiguevoe <br/>
+       <br/>"Breve historia de María Papel" II ©isbn 978-91-639-4402-4 Förlaget Voiguevoe <br/>
+      <br/>
+</p>  <!--    "pluma-content"        -->
+
+
+            <time id="dieZeit" style="color:#154779; padding-top:4px;
+                border-top:4px;
+                font-family:'New Times', Times, serif;
+                font-size:2vh;line-height:1.4;font-weight:bold;
+                text-shadow:1px 1px 1px #ababab;
+                padding-left:40px;
+                margin-left:20px;
+                margin-top:8px;
+                text-align:center;
+                "></time>
+
+            <p id="pageNumber" style="width:40px;height:18px; margin-left:40px;margin-top:10px; border-style: inset;border-radius:6px;border-color:green;
+            text-align:center;padding-bottom:7px;
+            color:brown">
+           <ins style="text-align:center; text-decoration:none; color:brown">p:</ins>
+        1</p>
+
+
+<img style="width:34px;height:34px;margin-left:44px;margin-top:10px;" src="BigPerf22.png" alt="Big">
+
+        </div>
+<!-- ---------------------------------------->
+ <script>
+let rep= 0;  //
+
+function pluma() {
+
+
+    const ff = document.getElementById("fenster");
+     const bb = document.getElementById("bucher");
+    rep = (rep % 2) + 1;
+
+    //ff.innerHTML = rep;
+    if (rep ===1)
+    {
+       bb.style.display = 'block';
+    }
+    else
+    {
+      bb.style.display = 'none';
+
+    }
 }
 </script>
 
-<footer class="footer" style="background-color:#E1DBCB;">
-          <div style=";border-top:2px;">
-               <time id="dieZeit" style="color:#154779;; padding-top:4px;
-               border-top:1px;
-                font-family:'Barlow Condensed';
-                ;font-size:2.5vw;font-weight:bold;
-                text-shadow:1px 1px 1px #ababab;
-                "></time>
-            <!-- border-style:solid;border-width:1px;border-color:black;-->
-          </div>
-           <div style="padding-left:2px;">
-               <img src="arc/MPNar5.png"
-                  style=" display:flex;align-items:right;width:34px;height:34px;"
-                alt="MP1">
-
-         </div>
-       <div style="padding-left:120px;;align-items:right;">  <!-- #f1ecd9;-->
-        <img id="bigornia" src="arc/BigPerf2.png"
-                  style=" display:flex;align-items:right;width:34px;height:34px;cursor:pointer;"
-                alt="Big2">
-        </div>
-</footer>
-
-
-            <p id="fenster"  style="color:darkslategrey;
-                font-family:Arial;font-size:10px;text-shadow:1px 1px 1px #ababab;">
-                    <!-- font-size:   2vh   -->
-            </p>
-
-<!--class="font-effect-emboss"-->
-
-        <script>
-
-    const imagen = document.getElementById('bigornia');
-
-    imagen.addEventListener('mousedown', () => {
-      imagen.style.opacity = '0.1'; // Desvanecer lentamente
-       document.getElementById('fenster').innerHTML= "Voiguevoe förlag, 2025.<br/>"
-       //©ISBN 978-91-639-4401-7\";
-       //venuskreis@icloud.com;\"
-
-    });
-
-    imagen.addEventListener('mouseup', () => {
-      imagen.style.opacity = '1'; // Recuperar lentamente
-       document.getElementById('fenster').innerHTML= "";
-    });
-
-    // Por si el mouse se sale del área
-    imagen.addEventListener('mouseleave', () => {
-      imagen.style.opacity = '1';
-    });
-  </script>
+<!-- ---------------------------------------->
 <script>
-  
+
 document.getElementById("dieZeit").innerHTML=fecha();
-
-
 function fecha() {
+
 let anno= new Date().getFullYear();
 let dayNr= new Date().getDate();
 let mesNr= new Date().getMonth();
@@ -395,14 +442,264 @@ meses1=["enero","febrero","marzo","abril","mayo","junio",
 
 dias=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
 
-return dias[day]+ " "+ dayNr +" "+"de"+" "+meses1[mesNr]+". "+"Año "+anno;
+return dias[day]+ " "+ dayNr +" "+"de"+" "+meses1[mesNr]+" "+anno;
+}
+</script>
 
+
+
+            <div class="linkesMenu" id="LM" style="background-color:#394d61;
+            margin-top:20px;margin-left:2px;">
+
+                <p class="index" id="num" style="border-bottom:2px ridge;padding-bottom:10px;width:100%;">1</p>
+
+
+
+                    <ul  class="listaRel"   id="listaRel" style="text-decoration:none;list-style-type: none;
+                    text-align:left;display:none;font-family:Georgia, Times, 'Times New Roman', serif, Arial, sans-serif;
+                    font-size:18px; line-height:194%;color:green;display:block;">
+
+                        <li ><a id = "rel0_" href="rel/intro.html" target="iframe_a">introducción</a></li>
+                        <li ><a id = "rel1_" href="rel/PatosSilvestres.html" target="iframe_a">Patos silvestres<br/></a></li>
+                        <li><a  href="rel/Navidad.html" target="iframe_a">Navidad<br/></a></li>
+                        <li><a  id = "rel3_" href="rel/HijoDeCeniza.html" target="iframe_a">El hijo de ceniza<br/></a></li>
+                        <li><a  id = "rel4_" href="rel/JuevesDeMarlon.html" target="iframe_a">Jueves de Marlon<br/></a></li>
+                        <li><a  href="rel/Pubertad.html" target="iframe_a">Pubertad<br/></a></li>
+                        <li><a  href="rel/MiTRudecindo.html" target="iframe_a">El tío Rudecindo<br/></a></li>
+                        <li><a  href="rel/DeVisita.html" target="iframe_a">DeVisita<br/></a></li>
+                        <li><a id="rel8_" href="rel/AlfonsoRiquelme.html" target="iframe_a">Mi amigo...<br/></a></li>
+                        <li><a  href="rel/PanDeDios.html" target="iframe_a">Pan de Dios<br/></a></li>
+                        <li><a  href="rel/NoSoyPaCasao.html" target="iframe_a">No soy pa'<i>casao</i><br/></a></li>
+                        <li><a  id = "rel12" href="rel/CasaDeLosUribes.html" target="iframe_a">Casa de los Uribes<br/></a></li>
+                    </ul>
+
+                  <ul  class="listaVK"   id="listaCV" style="text-decoration:none;list-style-type: none;
+                    text-align:left;display:none;font-family:Georgia, Times, 'Times New Roman', serif, Arial, sans-serif;
+                    font-size:18px; line-height:194%;color:green;visibility:hidden">
+
+                        <li ><a href="vk/proemio.html" target="iframe_a">Proemio</a></li>
+                        <li ><a href="vk/Miguel.html" target="iframe_a">Miguel<br/></a></li>
+                        <li><a  href="vk/DonHermenegildo.html" target="iframe_a">Desengaño<br/></a></li>
+                        <li ><a href="vk/DonaGertrudis.html" target="iframe_a">Doña Gertrudis<br/></a></li>
+                        <li><a  href="vk/IglesiaSanJose.html" target="iframe_a">Iglesia de San José<br/></a></li>
+                        <li><a  href="vk/DonGaleano.html" target="iframe_a">Don Galeano<br/></a></li>
+                        <li><a  href="vk/Valladares.html" target="iframe_a">Valladares<br/></a></li>
+                        <li><a  href="vk/LoEspejo.html" target="iframe_a">Lo Espejo<br/></a></li>
+                        <li><a  href="vk/LosDeseos.html" target="iframe_a">Los deseos...<br/></a></li>
+                        <li><a  href="vk/Penailillo.html" target="iframe_a">Peñailillo...<br/></a></li>
+                    </ul>
+
+                    <ul class="MPlista" id="listaMP" style="text-decoration:none;list-style-type: none;
+                    text-align:left;display:block;font-family:Georgia, Times, 'Times New Roman', serif, Arial, sans-serif;
+                    font-size:20px; line-height:196%;color:green;visibility:hidden">
+
+                        <li><a id = "cap0_" href="arc/Einleitung.html" target="iframe_a">Prólogo</a></li>
+                        <li ><a id = "cap1_"  href="arc/cap1.html" target="iframe_a">Acerca<br/></a></li>
+                        <li><a   id = "cap2_" href="arc/cap2Kort.html" target="iframe_a">Don Alfonso<br/></a></li>
+                        <li><a  id = "cap9_" href="arc/cap9.html" target="iframe_a">María Papel<br/></a></li>
+                        <li><a  id = "cap13" href="arc/cap13.html" target="iframe_a">Una obra sin...<br/></a></li>
+                        <li><a  id = "cap14" href="arc/cap14.html" target="iframe_a">Escuela...<br/></a></li>
+                        <li><a  id = "cap8_" href="arc/cap17.html" target="iframe_a">Septiembre<br/></a></li>
+                        <li><a  id = "cap19" href="arc/cap19.html" target="iframe_a">Felipe Asís<br/></a></li>
+                        <li><a  id = "cap32" href="arc/cap32.html" target="iframe_a">Incendio<br/></a></li>
+                    <li style="color:#e8b015; text-decoration:none; font-weight:lighter">. . . . . . . . . . </li>
+
+                    </ul>
+
+            </div>
+<!---->
+
+<!-- GRAPH: escenas de una obra inédita     -->
+<script>
+
+//var globalBilder = new Set(["rel0_","rel1_","rel4_","rel12","cap0_",
+                          //  "cap1_","cap2_","cap9_","cap13"]);
+
+let globalItem = "";
+let globalId   = "";
+var antwort ="";
+
+const fondos = {
+
+  "rel0_": " linear-gradient(178deg, rgba(74,149,175,1) 2.8%, rgba(200,239,249,1) 93.8%)",
+  "rel1_": "url('rel/ZweiEnten.jpg')",
+   "rel3_": "url('rel/baby.jpg')",
+   "rel4_": "url('rel/motorcycle.jpg')",
+   "rel8_": "url('rel/avion3.png')",
+   "rel12": "url('rel/Geist_1.jpg')",
+  "cap0_": "url('arc/MP6.jpg')",
+  "cap1_": "url('arc/Vogel_4.jpg')",
+  "cap2_": "url('arc/ImRegen3.jpg')",
+  "cap9_": "url('arc/kinder.jpg')",
+  "cap8_": "url('arc/MPCara.jpg')", //septiembre
+  "cap13": "url('arc/Loca3Ohne.png')", //una obra
+  "cap14": "url('arc/MPFenster.jpg')", //escuela
+  "cap19": "url('arc/impact122.jpg')",  //Felipe
+  "cap32": "linear-gradient(yellow, red)"     //incendio
+};
+
+
+ var items = document.querySelectorAll("#listaMP li,#listaRel li,#listaCV li");
+items.forEach(item => {
+  item.onclick = function () {
+    globalItem = this.innerHTML;
+    globalId = globalItem.substring(7, 12);
+   // antwort = globalBilder.has(globalId);
+   const  fenster = document.getElementById("fenster");
+
+
+    fenster.style.backgroundImage = "url('arc/vidrio1.jpg')";
+    document.getElementById('pageNumber').textContent = "1";        //ok
+
+   // alert("antwort ist= "+ antwort);
+    //fenster.textContent = globalId;
+
+    if (fondos[globalId]) {
+      fenster.textContent = "";
+      fenster.style.backgroundImage = fondos[globalId];
+      antwort = true;
+    } else {
+      fenster.style.backgroundImage = "linear-gradient(178deg, rgba(74,149,175,1) 2.8%, rgba(200,239,249,1) 93.8%)";
+      antwort = false;
+    }
+  };
+});
+</script>
+
+<!--      -->
+
+            <div class="texto" style="background-color:#2a2a5c;
+            font-family:'Palatino','Segoe UI', Tahoma, Verdana, sans-serif;
+            font-size: 30px;margin-bottom:1px;height:100%;width:100%;">
+            <iframe id ="myIFrame" class="ramka"  name="iframe_a" src="arc/Einleitung.html"
+              style="margin-left:auto;margin-right:6px; border-style: groove;
+              border-width: 2px 3px; border-color: white; border-radius:2px;
+              width:100%;height:100%;
+              " title="Iframe Example"></iframe>t
+            </div>
+
+            <div class="sieben" style="background-color:#d8C3A5;
+                        height:96%;;margin-left:8px;; padding-left:4px;margin-top:30px;
+                        color:#c0d5f0;border:hidden;">
+            </div>
+
+            <div id="fenster" class="fenster" style="color:darkslategrey;
+                width:220px;
+                font-family:Arial,Georgia, sans-serif;
+                font-size:16px;
+                padding-top:10px;
+                margin-top:14px;
+                text-shadow:1px 1px 1px #ababab;border-radius:1em;">
+
+              <p id="info"></p>
+                <br/>
+            </div>
+    </div><!--.🔒 -->
+</div>   <!-- container    -->
+
+<!--    -->
+<script>
+ var ggr = 0;  // obs!
+
+function hauptInfo() {
+
+    const ikon = document.getElementById("ikono1");
+    const ff = document.getElementById("fenster");
+    ggr = (ggr % 2) + 1;
+
+    //ff.innerHTML = ggr;
+    if (ggr ===1)
+    {
+    if(antwort) {
+             altImage = fenster.style.backgroundImage;
+             fenster.style.backgroundImage = "url('arc/vidrio1.jpg')";
+             //alert("antwort ist= "+ antwort);
+                }
+
+       ikon.src = "user(2)-64.jpg";
+       document.getElementById('fenster').innerHTML = 'Marco Villarroel Bruna. Escritor chileno, nació en Quillota, 1945. Profesor de Matemáticas; linguista; aficionado a la programación.'+
+       'Trabajó muchos años en la Universidad de Uppsala. Tres hijos, 6 nietos.<br/>' +
+           'Vive en Suecia desde el 27 e agosto de 1973.<br/>' +
+           '<br/>dir-electrónica_a: marcovbruna@gmail.com' +
+           '<br/>dir-electrónica_b: venuskreis@icloud.com<br/>'+
+           '...............................................<br/>'+
+           ' El menú (☰) tiene tres posiciones:   <br/>'+
+           '(1). Cuentos extraídos de diferentes libros.<br/>'+
+           '(2). Textos sacados del libro El Círculo de Venus.<br/>'+
+           '(3). Hojas sueltas de literatura infantil: Breve historia de María Papel.<br/>'+
+           '...............................................<br/>'
+
+    }
+    else if(ggr ===2)
+    {
+      ikon.src = "user(22)-64.jpg";
+      ff.innerHTML = " ";
+      ff.style.backgroundImage = altImage;
+     //ff.innerHTML = ggr;
+
+    }
 }
 
 </script>
-<br/><br/>
 
+<!-- limpio pageNumber    -->
+    <script>
+         document.getElementById('pageNumber').textContent = "1";
+    </script>
 
+ <!-- limpio pageNumber    -->
+
+     <script>
+    const iframe = document.getElementById('myIFrame');
+    const pageNumber = document.getElementById('pageNumber');
+    const lineHeight =30;
+    const linesPerPage = 46;
+
+      iframe.onload = () => {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+        iframeDoc.addEventListener('scroll', (event) => {
+          const scrollTop = iframeDoc.documentElement.scrollTop ||
+                  iframeDoc.body.scrollTop;
+          const page =Math.floor(scrollTop / (linesPerPage*lineHeight))+1;
+          pageNumber.textContent = ' ' + page;
+
+        })
+      }
+
+</script>
+
+<!-- ... agrega esto por si sales del programa -->
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+    const textoContainer = document.getElementById('myIFrame');
+    const pageNumber = document.getElementById('pageNumber');
+
+    const linesPerPage = 30;
+    const lineHeight = 20;
+
+    textoContainer.addEventListener('scroll', () => {
+        const scrollTop = textoContainer.scrollTop;
+        const page = Math.floor(scrollTop / (linesPerPage * lineHeight)) + 1;
+        pageNumber.textContent = ' ' + page;
+    });
+});
+</script>
+
+<!--counter-->
+<script>
+
+    const url = "https://api.counterapi.dev/v1/vkWeb/visitas/up";
+
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        console.log("Visitas):", data.count);
+      })
+      .catch(err => {
+        console.error("Error con CounterAPI:", err);
+      });
+  </script>
 
 </body>
 </html>

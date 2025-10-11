@@ -280,6 +280,7 @@ let veces = 0;
 function hauptMenu55() {
     const n = document.getElementById("num");
     const ikon = document.getElementById("menuIkon");
+	const sh = document.getElementById("ikono1");
 
     const x = document.getElementById("listaRel");
     const y = document.getElementById("listaCV");
@@ -295,6 +296,14 @@ function hauptMenu55() {
     z.style.display = "none";
 
     // Mostrar el correspondiente
+
+	if(ggr === 1){
+        const ff = document.getElementById("fenster");
+         ggr = 0;
+        sh.src = "user(22)-64.jpg";
+        ff.innerHTML = " ";
+        }
+	
     switch (veces) {
         case 1:
             x.style.display = "block";

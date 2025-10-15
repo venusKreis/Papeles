@@ -8,40 +8,18 @@
 window.onload = function () {
 
 
-  const isMobileDevice = /Android|iPhone|iPad/i.test(navigator.userAgent);
-  const screenWidth = window.innerWidth;
+  const h = screen.height;
+    const w = screen.width;
 
-  if (isMobileDevice || screenWidth <= 1024) {
-    window.location.href = "DieKleineSeite.html";
-  } else {
-    window.location.href = "DieGrosseSeite.html";
-  }
-}
 
-/*
- const isMobileDevice_1 = /Android|iPhone/i.test(navigator.userAgent);
-  const isMobileDevice_2 = /iPad/i.test(navigator.userAgent);
- //const screenWidth = window.screenWidth;
-  const screenWidth = window.innerWidth;
-
-  if (screenWidth <= 1024) {
-    if(isMobileDevice_1)
-    {
-    window.location.href = "DieKleineSeite.html";
-    }
-    else if (isMobileDevice_2){
-    window.location.href = "DieIpadSeite.html";
-    }
-    else{
-    window.location.href = "DieKleineSeite.html";
-    }
-  } //screen
-  else {
-    window.location.href = "DieGrosseSeite.html";
-  }
-}
-*/
- 
+      if(w>h)
+      {
+            document.getElementById("demo").innerHTML="DieGrosseSeite.html";
+      }else
+      {
+         document.getElementById("demo").innerHTML="DieKleineSeite.html";
+      }
+} //cierre
 </script>
  </head>
  <body>

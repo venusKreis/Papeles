@@ -7,14 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|emboss">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat&effect=emboss">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handlee|Inconsolata&effect=3d-float">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family='Barlow Condensed'">
+<link rel="stylesheet" href="estilo.css">
+<!--    <script src="script.js"></script>-->
 
-    <script src="script.js"></script>
 
-
-    <title>Kleine1 María Papel</title>
+    <title>Kleine3MP Oct</title>
 
     <style>
     :root{
@@ -26,7 +24,8 @@
      --palegold: #EEE8AA;
      --colorX: #e7e3d4;
      --colorHeader:#e6e2d8;
-     --colorNav:#FAEBD7; /* #FAF0E6; */
+     --colorNav:#FAEBD7;
+     --dieZeit:#154779;
 
 
      }
@@ -51,82 +50,25 @@ display:flex;
 margin-left:4px;
  height:6vh;
 background-color: var(--colorNav);
+box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .nav div:nth-of-type(1) {flex-grow: 1;}
-.nav div:nth-of-type(2) {flex-grow: 1;}
-.nav div:nth-of-type(3) {flex-grow: 1;}
+<!--.nav div:nth-of-type(2) {flex-grow: 1;}
+.nav div:nth-of-type(3) {flex-grow: 1;}-->
 .nav div:nth-of-type(4) {flex-grow: 6;}
 .nav div:nth-of-type(5) {flex-grow: 1;}
 .nav div:nth-of-type(6) {flex-grow: 1;}
 
 .footer {
 display:flex;
-
-  padding: 10px;
-  padding-left: 10px;
-  <!--text-align: left;
-  align-items:center;-->
+justify-content: space-around;
  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
  margin-top:10px;
  margin-bottom:10px;
 }
-.footer div:nth-of-type(1) {flex-grow: 1;}
-.footer div:nth-of-type(2) {flex-grow: 5;}
-.footer div:nth-of-type(3) {flex-grow: 1;}
 
 
-.ersterTitel{
-font-family: "Sofia", Palatino,sans-serif;
-font-size: 26px;
-text-shadow:3px 3px 3px #3d4749;
-text-align: center;
-color: brown;
-align-items:center;
-}
-.unterTitel{
-font-size:20px;
-text-shadow:1px 1px 1px #3d4749;
-font-family: 'Caveat',Palatino;
-font-weight:bolder;
-text-align: center;
-}
-.texto::first-letter {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Arial Narrow', Arial, sans-serif;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: brown;
-
-}
-#contenido{
-    height:auto;
-    width:600;
-   font-family:'Georgia','Segoe UI', Tahoma, Verdana, sans-serif;
-   font-size: 24px;
-   color: rgb(7, 27, 78);
-   padding:10px 10px;
-   margin-left:26px;
-   margin-right: 26px;
-   text-align: center;
-   word-wrap:normal;
-}
-
-.epigrafe{
-    padding:30px 30px;
-   text-align: justify;
-   text-align: center; /*right;*/
-   font-family:Garamond, "Times New Roman", Times, serif;
-   font-size: 3vw;
-   line-height: 94%;
-   overflow: auto;
-   white-space: wrap;
-}
-
-.Schild{
-    font-family: 'Caveat';
-    font-weight:bolder;
-    font-size:36px;
-    text-align: center;
-}
 .sobremouse:hover {
   cursor: pointer;
   opacity:0.25;
@@ -141,12 +83,13 @@ text-align: center;
   cursor: pointer;
   margin-bottom:2px;
   margin-left:10px;
-<!-- border-radius: 2px;-->
+border-radius: 8px;
+transition-duration: 0.4s;
 
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: aliceblue;
+  background-color: #bddeda;
 }
 
 .dropdown {
@@ -211,23 +154,23 @@ text-align: center;
     display:flex;
     align-items:center;
     justify-content:center;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    <!--box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+     rgba(0, 0, 0, 0.22) 0px 10px 10px;-->
 }
 .ramka{
 
         width:100%;
         height:68vh;
-
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        background-color:#f7ecd9;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+        rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .texto{
 
 height: auto;
 width:100%;
 font-family:'Palatino','Segoe UI', Tahoma, Verdana, sans-serif;
-font-size: 30px;
+font-size: 28px;
 color: rgb(7, 27, 78);
 
 padding:10px 10px;
@@ -240,9 +183,45 @@ word-wrap:normal;
 }
 
  #bigornia {
-      width: 40px;
       height: auto;
       transition: opacity 0.8s ease;
+    }
+
+<!-- menú bajo-->
+
+ .menu {
+      display: inline-block;
+
+      justify-content: space-around;
+      text-align:center;
+      align-items: center;
+      background-color: white;
+      border-top: 1px solid #ddd;
+      padding: 8px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    }
+
+    .menu-item {
+      display:inline-block;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      transition: color 0.2s;
+      padding:16px;
+    }
+
+    .menu-item i {
+      font-size: 18px;
+      margin-bottom: 3px;
+      display: block;
+    }
+
+    .menu-item:hover {
+      color: #007aff; /* azul iPhone */
     }
 </style>
 </head>
@@ -252,7 +231,7 @@ word-wrap:normal;
 
 <section>
 
-    <header class="header" style="background-color:#E1DBCB;;">
+    <header class="header" style="background-color:AntiqueWhite;">
         <!--e6e2d8,F1ECD9-->
             <h1></h1>
             <p class="ersterTitel">María Papel</p>
@@ -267,11 +246,12 @@ word-wrap:normal;
 
     <nav class="nav" style="background-color:#efefef;">
 
-        <div class="hause" style="background-color:Cornsilk;">   <!--home, bars-->
+        <div class="hause" style="background-color:AntiqueWhite;">   <!--home, bars-->
                 <div class="dropdown">
-                <button id="menuButton" style="margin-left:8px;" onclick="myFunction()" class="dropbtn">
+                <button id="menuButton" style="margin-left:12px;border-radius: 4px;
+                border: none;color:white;" onclick="myFunction()" class="dropbtn">
                 <i class='fas fa-bars'
-                style='font-size:20px;color:blue; style="background-color:Cornsilk;
+                style='font-size:20px;color:brown; style="background-color:Cornsilk;
                '></i>
                 </button>
             <br/>
@@ -287,23 +267,49 @@ word-wrap:normal;
         </div>   <!--home, bars-->
 
 
-        <div class="buch" style="background-color:Cornsilk;">
-            <i class="fas fa-book-open reader" style="font-size:20px;color:blue;
-            background-color:#efefef;cursor:pointer;"></i>
+        <div class="buch" style="background-color:AntiqueWhite;">
+<!--            <i class="fas fa-book-open reader" style="font-size:20px;color:blue;-->
+<!--            background-color:#efefef;cursor:pointer;"></i>-->
+            <img id="bigornia" src="arc/BigPerf22.png"
+                  style=" display:flex;align-items:right;width:24px;height:24px;
+                            margin-bottom:4px;margin-left:8px;cursor:pointer;
+padding-left:2px;"
+                alt="Big2">
         </div>
-        <div style="background-color:khaki;"></div>
-        <div style="background-color:AntiqueWhite;"></div>
-        <div style="background-color:lightgrey;"></div>
-        <div style="background-color:lightgrey;"></div>
+        <div style="background-color:AntiqueWhite;">
+
+        </div>
+        <div style="background-color:AntiqueWhite;">
+            <div style="border-top:2px;">
+               <time id="dieZeit" style="color:#154779;; padding-top:4px;
+               border-top:4px;
+                font-family:'Barlow Condensed';
+                ;font-size:10;font-weight:bold;
+                text-shadow:1px 1px 1px #ababab;
+                padding-left:60px;
+                margin-left:20px;
+                "></time>
+                                <!--  font-size:2.5vw;  -->
+          </div>
+
+        </div>
+
     </nav>
 <hr/>
 
 </section>
-        <hr style="border:2px;background-color:green;color:green;"/>
+
+
 
 <hr/>
-<br/>
-<iframe class="ramka" src="arc/Einleitung.html" name="iframe_a"  title="Iframe Example"></iframe>
+
+<span id="fenster"  style="color:darkslategrey;
+                font-family:Arial;font-size:16px;text-shadow:1px 1px 1px #ababab;">
+                    <!-- font-size:   2vh   -->
+            </span>
+<!--        <hr style="border:2px;background-color:green;color:green;"/>-->
+<br/><br/>
+<iframe class="ramka"    src="arc/Einleitung.html" name="iframe_a"  title="Iframe Example"></iframe>
 
 
 <script>
@@ -326,47 +332,19 @@ window.onclick = function(event) {
 }
 </script>
 
-<footer class="footer" style="background-color:#E1DBCB;">
-          <div style=";border-top:2px;">
-               <time id="dieZeit" style="color:#154779;; padding-top:4px;
-               border-top:1px;
-                font-family:'Barlow Condensed';
-                ;font-size:2.5vw;font-weight:bold;
-                text-shadow:1px 1px 1px #ababab;
-                "></time>
-            <!-- border-style:solid;border-width:1px;border-color:black;-->
-          </div>
-           <div style="padding-left:2px;">
-               <img src="arc/MPNar5.png"
-                  style=" display:flex;align-items:right;width:34px;height:34px;"
-                alt="MP1">
+<footer class="footer" style="background-color: var(--colorX);">
 
-         </div>
-       <div style="padding-left:120px;;align-items:right;">  <!-- #f1ecd9;-->
-        <img id="bigornia" src="arc/BigPerf2.png"
-                  style=" display:flex;align-items:right;width:34px;height:34px;cursor:pointer;"
-                alt="Big2">
-        </div>
 </footer>
 
+<!---->
 
-            <p id="fenster"  style="color:darkslategrey;
-                font-family:Arial;font-size:10px;text-shadow:1px 1px 1px #ababab;">
-                    <!-- font-size:   2vh   -->
-            </p>
-
-<!--class="font-effect-emboss"-->
-
-        <script>
+   <script>
 
     const imagen = document.getElementById('bigornia');
 
     imagen.addEventListener('mousedown', () => {
       imagen.style.opacity = '0.1'; // Desvanecer lentamente
-       document.getElementById('fenster').innerHTML= "Voiguevoe förlag, 2025.<br/>"
-       //©ISBN 978-91-639-4401-7\";
-       //venuskreis@icloud.com;\"
-
+       document.getElementById('fenster').innerHTML= "Marco Villarroel Bruna " + " (Voiguevoe förlag, 2025)" + " ☀︎  ©ISBN 978-91-639-4401-7"
     });
 
     imagen.addEventListener('mouseup', () => {
@@ -379,10 +357,10 @@ window.onclick = function(event) {
       imagen.style.opacity = '1';
     });
   </script>
+<!---->
 <script>
-  
-document.getElementById("dieZeit").innerHTML=fecha();
 
+document.getElementById("dieZeit").innerHTML=fecha();
 
 function fecha() {
 let anno= new Date().getFullYear();
@@ -395,14 +373,12 @@ meses1=["enero","febrero","marzo","abril","mayo","junio",
 
 dias=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
 
-return dias[day]+ " "+ dayNr +" "+"de"+" "+meses1[mesNr]+". "+"Año "+anno;
+return dias[day]+ " "+ dayNr +" "+"de"+" "+meses1[mesNr]+". "+anno;
 
 }
 
 </script>
 <br/><br/>
-
-
 
 </body>
 </html>

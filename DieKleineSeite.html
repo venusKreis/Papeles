@@ -303,7 +303,7 @@ padding-left:2px;"
 
 <hr/>
 
-<span id="fenster"  style="color:darkslategrey;
+<span id="fenster0"  style="color:darkslategrey;
                 font-family:Arial;font-size:16px;text-shadow:1px 1px 1px #ababab;">
                     <!-- font-size:   2vh   -->
             </span>
@@ -340,22 +340,26 @@ window.onclick = function(event) {
 
    <script>
 
-    const imagen = document.getElementById('bigornia');
+     const imagen = document.getElementById('bigornia');
 
-    imagen.addEventListener('mousedown', () => {
-      imagen.style.opacity = '0.1'; // Desvanecer lentamente
-       document.getElementById('fenster').innerHTML= "Marco Villarroel Bruna " + " (Voiguevoe förlag, 2025)" + " ☀︎  ©ISBN 978-91-639-4401-7"
-    });
+    function desvanecer(){
+    imagen.style.opacity = '0.1';
+    document.getElementById('fenster0').innerHTML = " 🛠️ Voiguevoe förlag - 2025 \
+    ©ISBN 978-91-639-4401-7"
+    }
 
-    imagen.addEventListener('mouseup', () => {
-      imagen.style.opacity = '1'; // Recuperar lentamente
-       document.getElementById('fenster').innerHTML= "";
-    });
+    function restaurar(){
+    imagen.style.opacity = '1';
+    document.getElementById('fenster0').innerHTML = ""
+    };
 
-    // Por si el mouse se sale del área
-    imagen.addEventListener('mouseleave', () => {
-      imagen.style.opacity = '1';
-    });
+    imagen.addEventListener('mousedown', desvanecer);
+    imagen.addEventListener('mouseup',restaurar);
+    imagen.addEventListener('mouseleave',restaurar)
+     //pantallás táctiles
+    imagen.addEventListener('touchstart', desvanecer);
+    imagen.addEventListener('touchend',restaurar);
+    imagen.addEventListener('touchcancel',restaurar)
   </script>
 <!---->
 <script>

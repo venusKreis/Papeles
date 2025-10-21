@@ -125,9 +125,17 @@ resize:both;       /*Gut!*/
 }
 
 
- li:hover{
-    color: red;
-    /*transform:scale(1.1);*/
+li:hover{
+ ::after {
+        content: attr(data-item);
+        background:transparent
+       font-family: "Arial", "Baskerville", sans-serif;
+        font-size:8px;
+        text-transform: lowercase;
+        color: #d6990b;
+        }
+
+color: red;
     cursor:pointer;
 }
 
@@ -469,18 +477,18 @@ return dias[day]+ " "+ dayNr +" "+"de"+" "+meses1[mesNr]+" "+anno;
                     text-align:left;display:none;font-family:Georgia, Times, 'Times New Roman', serif, Arial, sans-serif;
                     font-size:18px; line-height:194%;color:green;display:block;">
 
-                        <li ><a id = "rel0_" href="rel/intro.html" target="iframe_a">introducción</a></li>
-                        <li ><a id = "rel1_" href="rel/PatosSilvestres.html" target="iframe_a">Patos silvestres<br/></a></li>
-                        <li><a  href="rel/Navidad.html" target="iframe_a">Navidad<br/></a></li>
-                        <li><a  id = "rel3_" href="rel/HijoDeCeniza.html" target="iframe_a">El hijo de ceniza<br/></a></li>
-                        <li><a  id = "rel4_" href="rel/JuevesDeMarlon.html" target="iframe_a">Jueves de Marlon<br/></a></li>
-                        <li><a  href="rel/Pubertad.html" target="iframe_a">Pubertad<br/></a></li>
-                        <li><a  href="rel/MiTRudecindo.html" target="iframe_a">El tío Rudecindo<br/></a></li>
-                        <li><a  href="rel/DeVisita.html" target="iframe_a">De Visita<br/></a></li>
-                        <li><a id="rel8_" href="rel/AlfonsoRiquelme.html" target="iframe_a">Mi amigo...<br/></a></li>
-                        <li><a  href="rel/PanDeDios.html" target="iframe_a">Pan de Dios<br/></a></li>
-                        <li><a  href="rel/NoSoyPaCasao.html" target="iframe_a">No soy pa'<i>casao</i><br/></a></li>
-                        <li><a  id = "rel12" href="rel/CasaDeLosUribes.html" target="iframe_a">Casa de los Uribes<br/></a></li>
+                     <li ><a id = "rel0_" href="rel/intro.html" target="iframe_a">introducción</a></li>
+                        <li ><a id = "rel1_" href="rel/PatosSilvestres.html" target="iframe_a" data-item="  10p">Patos silvestres</a></li>
+                        <li><a  href="rel/Navidad.html" target="iframe_a" data-item="  4p">Navidad</a></li>
+                        <li><a  id = "rel3_" href="rel/HijoDeCeniza.html" target="iframe_a" data-item="  10p">Hijo de ceniza</a></li>
+                        <li><a  id = "rel4_" href="rel/JuevesDeMarlon.html" target="iframe_a" data-item="  50p">Marlon</a></li>
+                        <li><a  href="rel/Pubertad.html" target="iframe_a" data-item="  10p">Pubertad</a></li>
+                        <li><a  href="rel/MiTRudecindo.html" target="iframe_a" data-item="  9p">Tío Rudecindo</a></li>
+                        <li><a  href="rel/DeVisita.html" target="iframe_a" data-item="  8p">De visita</a></li>
+                        <li><a  id = "rel8_"  href="rel/AlfonsoRiquelme.html" target="iframe_a" data-item="  43p">Mi amigo...</a></li>
+                        <li><a  href="rel/PanDeDios.html" target="iframe_a" data-item="  19p">Pan de Dios</a></li>
+                        <li><a  href="rel/NoSoyPaCasao.html" target="iframe_a" data-item="  7p">No soy pa'<i>casao</i></a></li>
+                        <li><a  id = "rel12" href="rel/CasaDeLosUribes.html" target="iframe_a" data-item="  19p">Los Uribes...</a></li>
                     </ul>
 
                   <ul  class="listaVK"   id="listaCV" style="text-decoration:none;list-style-type: none;

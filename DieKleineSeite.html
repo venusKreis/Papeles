@@ -183,8 +183,11 @@ word-wrap:normal;
 }
 
  #bigornia {
+       cursor: pointer;
       height: auto;
       transition: opacity 0.8s ease;
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
     }
 
 <!-- menú bajo-->
@@ -353,9 +356,22 @@ window.onclick = function(event) {
     document.getElementById('fenster0').innerHTML = ""
     };
 
-    imagen.addEventListener('touchstart', desvanecer);
+    imagen.addEventListener('mousedown', desvanecer);
+    imagen.addEventListener('mouseup',restaurar);
+    imagen.addEventListener('mouseleave',restaurar)
+
+     //pantallás táctiles
+    //imagen.addEventListener('touchstart', desvanecer);
+    imagen.addEventListener('touchstart', function(event)
+    {
+    event.preventDefault();
+    desvanecer();
+
+    });
+
     imagen.addEventListener('touchend',restaurar);
     imagen.addEventListener('touchcancel',restaurar)
+
   </script>
 <!---->
 <script>

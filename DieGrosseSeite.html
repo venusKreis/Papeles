@@ -253,7 +253,11 @@ border: 1px solid rgba(255,255,255,0.4);
   overflow-y:scroll;
   z-index: 1;
 }
-
+		
+#bigornia {
+      height: auto;
+      transition: opacity 0.8s ease;
+    }
     </style>
 <!-- .............................. -->
 </head>
@@ -417,10 +421,36 @@ if((x.style.display === "none")){         //si MP no se ve
         1</p>
 
 
-<img style="width:34px;height:34px;margin-left:44px;margin-top:10px;" src="BigPerf22.png" alt="Big">
+<img id="bigornia" style="width:34px;height:34px;margin-left:40px;margin-top:10px;cursor:pointer;" src="BigPerf22.png" alt="Big">
 
         </div>
 <!-- ---------------------------------------->
+<script>
+     const imagen = document.getElementById('bigornia');
+
+    function desvanecer(){
+    imagen.style.opacity = '0.1';
+    document.getElementById('fenster').innerHTML = " 🛠️ Voiguevoe förlag - 2025 \
+    ©ISBN 978-91-639-4401-7"
+    }
+
+    function restaurar(){
+    imagen.style.opacity = '1';
+    document.getElementById('fenster').innerHTML = ""
+    };
+
+    imagen.addEventListener('mousedown', desvanecer);
+    imagen.addEventListener('mouseup',restaurar);
+    imagen.addEventListener('mouseleave',restaurar)
+     //pantallás dáctiles
+    imagen.addEventListener('touchstart', desvanecer);
+    imagen.addEventListener('touchend',restaurar);
+    imagen.addEventListener('touchcancel',restaurar)
+
+  </script>
+
+
+<!-- ---------------------------------------->			
  <script>
 let rep= 0;  //
 

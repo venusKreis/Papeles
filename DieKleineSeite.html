@@ -230,7 +230,7 @@ word-wrap:normal;
 </head>
 
 
-<body style="background-color:#f0f0e9;">
+<body style="background-color:#f0f0e9;cursor: pointer;">
 
 <section>
 
@@ -361,13 +361,13 @@ window.onclick = function(event) {
     imagen.addEventListener('mouseleave',restaurar);
 
      //pantallás táctiles
-    //imagen.addEventListener('touchstart', desvanecer);
-    imagen.addEventListener('touchstart', function(event)
+    imagen.addEventListener('touchstart', desvanecer);
+    /*imagen.addEventListener('touchstart', function(event)
     {
     event.preventDefault();
     desvanecer();
 
-    });
+    });*/
 
     imagen.addEventListener('touchend',restaurar);
     imagen.addEventListener('touchcancel',restaurar);

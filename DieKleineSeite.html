@@ -360,17 +360,12 @@ window.onclick = function(event) {
     imagen.addEventListener('mouseup',restaurar);
     imagen.addEventListener('mouseleave',restaurar);
 
-     //pantallás táctiles
-    imagen.addEventListener('touchstart', desvanecer);
-    /*imagen.addEventListener('touchstart', function(event)
-    {
-    event.preventDefault();
-    desvanecer();
+     //pantallas táctiles
+    imagen.addEventListener('touchstart', desvanecer, {passive, true});
+    imagen.addEventListener('touchend',restaurar, {passive, true});
+    imagen.addEventListener('touchcancel',restaurar, {passive, true})
 
-    });*/
 
-    imagen.addEventListener('touchend',restaurar);
-    imagen.addEventListener('touchcancel',restaurar);
 
   </script>
 <!---->

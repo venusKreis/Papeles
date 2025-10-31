@@ -12,309 +12,142 @@
 <!--    <script src="script.js"></script>-->
 
 
-    <title>Kleine3MP Oct</title>
+    <title>DasReineBlatt Oct</title>
 
     <style>
     :root{
-         --suave1: #eeede6;
-         --suave2: #e73304;
-         --gelb0:  #FBE8A6;
-     --gelb: #FBE8A6;
-     --turquesa: #AFEEEE;
-     --palegold: #EEE8AA;
-     --colorX: #e7e3d4;
-     --colorHeader:#e6e2d8;
-     --colorNav:#FAEBD7;
      --dieZeit:#154779;
-
-
+     --colorNav:#efefef;
+     --AntiqueWhite:#E3E4FA;
+     --bodyColor:#fdf5e0;
+     --headerColor:#F8F9F5;
+     --MPColor:#1d364d;
      }
-
-
+<!--last:fff5f6,B0E0E6(azul),E3E4FA(OK)-->
+<!-#E3E4FA-,F8F9F5(gris1,OK),DEE1E2(gris2)-->
     * {
   box-sizing: border-box;
     }
-
 .header {
-  display:flex;
-  background-color: var(--colorX);
-  margin-top:4px;
-  padding-top: 4px;
+display:flex:
+  margin-top:2px;
+  margin-left:4px;
+  padding-top: 1px;
   text-align: center;
   height:14vh;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  align-items:center;
+<!--  align-items:center;-->
 }
+
 .nav{
 display:flex;
+width:100%
+
 margin-left:4px;
- height:6vh;
-background-color: var(--colorNav);
+ height:8vh;
 box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+     rgba(0, 0, 0, 0.22) 0px 2px 2px;
 }
 .nav div:nth-of-type(1) {flex-grow: 1;}
-<!--.nav div:nth-of-type(2) {flex-grow: 1;}
-.nav div:nth-of-type(3) {flex-grow: 1;}-->
-.nav div:nth-of-type(4) {flex-grow: 6;}
+.nav div:nth-of-type(2) {flex-grow: 1;}
+.nav div:nth-of-type(3) {flex-grow: 6;}
+.nav div:nth-of-type(4) {flex-grow: 1;}
 .nav div:nth-of-type(5) {flex-grow: 1;}
-.nav div:nth-of-type(6) {flex-grow: 1;}
+
 
 .footer {
 display:flex;
+
+margin-left:4px;
 justify-content: space-around;
  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
  margin-top:10px;
  margin-bottom:10px;
 }
 
-
-.sobremouse:hover {
-  cursor: pointer;
-  opacity:0.25;
-}
-    /*.........................................*/
-    dropbtn {
-  background-color:#3498DB ;
-  color: white;
-  padding: 2px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  margin-bottom:2px;
-  margin-left:10px;
-border-radius: 8px;
-transition-duration: 0.4s;
-
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #bddeda;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  background-image: linear-gradient( 111.9deg,  rgba(248,248,240,1) 80.9%,
-  rgba(187,187,187,1) 116.8% );
-<!--  background-image: url("arc/papelAgua0.jpg");-->
-  display:flex;          <!--achtung-->
-   align-items:center;
-  font-family:'Barlow Condensed';
-  text-shadow:3px 3px 3px #ababab;
-  font-size:3vw;
-  font-weight:bold;
-  min-width: 160px;
-  overflow: auto;
-<!--  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);-->
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: #154779;
-  padding: 12px 16px;
-  text-decoration: none;
-  background-color:transparent;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-
-
-#menuButton {
-<!--  padding: 10px 20px;-->
-  font-size: 24px;
-  cursor: pointer;
-}
-#menuButton i {
-  pointer-events: none; /* <<< Esto es lo importante */
-}
-    /*.........................................*/
-.img {
-<!--  border: 1px solid #ddd;-->
-<!--  border-radius: 4px;-->
-  padding: 5px;
-}
-.hause {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    <!--box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-     rgba(0, 0, 0, 0.22) 0px 10px 10px;-->
-}
-.buch {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    <!--box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-     rgba(0, 0, 0, 0.22) 0px 10px 10px;-->
-}
 .ramka{
-
-        width:100%;
-        height:68vh;
-        background-color:#f7ecd9;
+        width:98%;
+        height:90vh;
+        height:600px;
+        margin-left:4px;
+background-image:url("arc/vidrio1.jpg");
+         background-size:cover;
+    background-color:#f7ecd9;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
         rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-.texto{
 
-height: auto;
-width:100%;
-font-family:'Palatino','Segoe UI', Tahoma, Verdana, sans-serif;
-font-size: 28px;
-color: rgb(7, 27, 78);
 
-padding:10px 10px;
-margin-top:20px;
-margin-left:10px;
-margin-right: 10px;
-text-align: center;
-word-wrap:normal;
-<!--background-color:red;  funciona-->
-}
-
- #bigornia {
-       cursor: pointer;
-      height: auto;
-      transition: opacity 0.8s ease;
-      -webkit-touch-callout:none;
-      -webkit-user-select:none;
-    }
-
-<!-- menú bajo-->
-
- .menu {
-      display: inline-block;
-
-      justify-content: space-around;
-      text-align:center;
-      align-items: center;
-      background-color: white;
-      border-top: 1px solid #ddd;
-      padding: 8px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
-    }
-
-    .menu-item {
-      display:inline-block;
-      text-align: center;
-      font-size: 12px;
-      color: #666;
-      transition: color 0.2s;
-      padding:16px;
-    }
-
-    .menu-item i {
-      font-size: 18px;
-      margin-bottom: 3px;
-      display: block;
-    }
-
-    .menu-item:hover {
-      color: #007aff; /* azul iPhone */
-    }
 </style>
 </head>
 
 
-<body style="background-color:#f0f0e9;cursor: pointer;">
+<body style="background-color:var(--bodyColor);cursor: pointer;
+        ">
 
-<section>
 
-    <header class="header" style="background-color:AntiqueWhite;">
-        <!--e6e2d8,F1ECD9-->
-            <h1></h1>
-            <p class="ersterTitel">María Papel</p>
-             <p class="epigrafe"><i>María Papel era así:
-     prefería arrancarse una espina del corazón,
-     a que arrancarse una idea del corazón.</i></p>
+
+<!--alabaster,-->
+    <header class="header" style="background-color:var(--headerColor);" >
+
+            <p class="ersterTitel" style="color:var(--MPColor); text-align:center;margin-top:4px;";>María Papel</p>
+
     </header>
-<br/>
 
     <hr/>
 
 
-    <nav class="nav" style="background-color:#efefef;">
-
-        <div class="hause" style="background-color:AntiqueWhite;">   <!--home, bars-->
-                <div class="dropdown">
-                <button id="menuButton" style="margin-left:12px;border-radius: 4px;
-                border: none;color:white;" onclick="myFunction()" class="dropbtn">
-                <i class='fas fa-bars'
-                style='font-size:20px;color:brown; style="background-color:Cornsilk;
-               '></i>
-                </button>
-            <br/>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="arc/Einleitung.html" target="iframe_a">Prólogo</a>
-                    <a href="arc/cap1.html" target="iframe_a">Acerca</a>
-                    <a href="arc/cap2Kort.html" target="iframe_a">Don Alfonso</a>
-                    <a href="arc/cap9.html" target="iframe_a">María</a>
-                    <a href="arc/cap14.html" target="iframe_a">Escuela de niñas</a>
-                    <a href="arc/cap19.html" target="iframe_a">Felipe Asís</a>
-                </div>
-                </div>   <!--dropdown-->
+    <nav class="nav" style="background-color:var(--headerColor);">
+            <!--home, bars-->
+        <div class="menu" style="background-color:var(--headerColor);text-align:center;
+         border:1px solid; border-color: blue;border-style:inset">
+            1
         </div>   <!--home, bars-->
+    <!--.................................        -->
 
-
-        <div class="buch" style="background-color:AntiqueWhite;">
-<!--            <i class="fas fa-book-open reader" style="font-size:20px;color:blue;-->
-<!--            background-color:#efefef;cursor:pointer;"></i>-->
-            <img id="bigornia" src="arc/BigPerf22.png"
-                  style=" display:flex;align-items:right;width:24px;height:24px;
-                            margin-bottom:4px;margin-left:8px;cursor:pointer;
-padding-left:2px;"
-                alt="Big2">
+        <div class="zwei" style="background-color:var(--headerColor);text-align:center;
+        border:1px solid; border-color: blue;border-style:inset">
+        2
         </div>
-        <div style="background-color:AntiqueWhite;">
+    <!--.................................        -->
+        <div class="zeit" style="background-color:var(--headerColor);text-align:center;
+        border:1px solid; ;border-color: #f3f0e8;border-style:inset">
+            3
 
         </div>
-        <div style="background-color:AntiqueWhite;">
-            <div style="border-top:2px;">
-               <time id="dieZeit" style="color:#154779;; padding-top:4px;
-               border-top:4px;
-                font-family:'Barlow Condensed';
-                ;font-size:10;font-weight:bold;
-                text-shadow:1px 1px 1px #ababab;
-                padding-left:60px;
-                margin-left:20px;
-                "></time>
-                                <!--  font-size:2.5vw;  -->
-          </div>
-
+     <!--.................................        -->
+        <div class="vier" style="background-color:var(--headerColor);text-align:center;
+         border:1px solid; border-color: green;border-style:inset">
+            4
+        </div>
+          <!--.................................        -->
+         <div class="funf" style="background-color:var(--headerColor);text-align:center;
+         border:1px solid; border-color: red;border-style:inset">
+            5
         </div>
 
     </nav>
 <hr/>
 
-</section>
+<p id="fenster0"  style="
+                font-family:Sofia;font-size:12px;font-weight:bold;line-height:14px;
+                text-align:center;color:var(MPColor);width:90%; height:20px;">María Papel era así: prefería arrancarse una espina del corazón, a que arrancarse una idea del corazón.</p>
 
 
+<br/>
 
-<hr/>
+<iframe class="ramka"     name="iframe_a" src="arc/Einleitung.html"
+        title="Iframe Example"
+style=" border-style: groove;
+              border-width: 2px 3px; border-color: white; border-radius:2px";></iframe>
 
-<span id="fenster0"  style="color:darkslategrey;
-                font-family:Arial;font-size:16px;text-shadow:1px 1px 1px #ababab;">
-                    <!-- font-size:   2vh   -->
-            </span>
-<!--        <hr style="border:2px;background-color:green;color:green;"/>-->
 <br/><br/>
-<iframe class="ramka"    src="arc/Einleitung.html" name="iframe_a"  title="Iframe Example"></iframe>
+  <hr style="color:red;border:1px solid"><hr/>
 
+<footer class="footer" style="background-color: var(--colorX);">FOOTER
+</footer>
 
+  <hr style="color:red;border:1px solid"><hr/>
 <script>
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
@@ -335,19 +168,14 @@ window.onclick = function(event) {
 }
 </script>
 
-<footer class="footer" style="background-color: var(--colorX);">
 
-</footer>
-
-<!---->
 
    <script>
-
      const imagen = document.getElementById('bigornia');
 
     function desvanecer(){
     imagen.style.opacity = '0.1';
-    document.getElementById('fenster0').innerHTML = " 🛠️ Voiguevoe förlag \ 
+    document.getElementById('fenster0').innerHTML = " 🛠️ Voiguevoe förlag\
     ©ISBN 978-91-639-4401-7"
     }
 
@@ -356,38 +184,33 @@ window.onclick = function(event) {
     document.getElementById('fenster0').innerHTML = ""
     };
 
-    imagen.addEventListener('mousedown', desvanecer);
-    imagen.addEventListener('mouseup',restaurar);
-    imagen.addEventListener('mouseleave',restaurar);
+    imagen.addEventListener('pointerdown', desvanecer);
+    imagen.addEventListener('pointerup',restaurar);
+    imagen.addEventListener('pointerleave',restaurar);
+    imagen.addEventListener('pointercancel',restaurar);
 
-     //pantallas táctiles
-    imagen.addEventListener('touchstart', desvanecer, {passive, true});
-    imagen.addEventListener('touchend',restaurar, {passive, true});
-    imagen.addEventListener('touchcancel',restaurar, {passive, true})
+       //táctiles, {passive, true}- molesta en la computadora
 
-
+    imagen.addEventListener('touchstart', desvanecer);
+    imagen.addEventListener('touchend',restaurar);
+    imagen.addEventListener('touchcancel',restaurar)
 
   </script>
 <!---->
 <script>
-
 document.getElementById("dieZeit").innerHTML=fecha();
-
 function fecha() {
 let anno= new Date().getFullYear();
 let dayNr= new Date().getDate();
 let mesNr= new Date().getMonth();
 let day = new Date().getDay();
-
 meses1=["enero","febrero","marzo","abril","mayo","junio",
       "julio","agosto","septiembre","octubre","noviembre","diciembre"];
 
 dias=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
 
-return dias[day]+ " "+ dayNr +" "+"de"+" "+meses1[mesNr]+". ";
-
+return dias[day]+ " "+ dayNr +" "+"de"+" "+meses1[mesNr]+". "+anno;
 }
-
 </script>
 <br/><br/>
 

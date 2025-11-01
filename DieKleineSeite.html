@@ -45,13 +45,15 @@ width:100%
 
 margin-left:4px;
  height:8vh;
+ align-items:center;
 box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
      rgba(0, 0, 0, 0.22) 0px 2px 2px;
+
 }
 .nav div:nth-of-type(1) {flex-grow: 1;}
-.nav div:nth-of-type(2) {flex-grow: 1;}
-.nav div:nth-of-type(3) {flex-grow: 6;}
-.nav div:nth-of-type(4) {flex-grow: 1;}
+.nav div:nth-of-type(2) {flex-grow: 2;}
+.nav div:nth-of-type(3) {flex-grow: 4;}
+.nav div:nth-of-type(4) {flex-grow: 2;}
 .nav div:nth-of-type(5) {flex-grow: 1;}
 
 
@@ -82,7 +84,7 @@ background-image:url("arc/vidrio1.jpg");
 </head>
 
 
-<body style="background-color:var(--bodyColor);cursor: pointer;
+<body style="background-color:var(--bodyColor);
         ">
 
 
@@ -90,7 +92,7 @@ background-image:url("arc/vidrio1.jpg");
 <!--alabaster,-->
     <header class="header" style="background-color:var(--headerColor);" >
 
-            <p class="ersterTitel" style="color:var(--MPColor); text-align:center;margin-top:4px;";>María Papel</p>
+            <p class="ersterTitel" style="color:var(--MPColor); text-align:center;margin-top:4px;">María Papel</p>
 
     </header>
 
@@ -99,30 +101,37 @@ background-image:url("arc/vidrio1.jpg");
 
     <nav class="nav" style="background-color:var(--headerColor);">
             <!--home, bars-->
-        <div class="menu" style="background-color:var(--headerColor);text-align:center;
-         border:1px solid; border-color: blue;border-style:inset">
+        <div class="eins" style="background-color:var(--headerColor);text-align:center;
+         border:1px solid; border-color: blue;">
             1
         </div>   <!--home, bars-->
     <!--.................................        -->
 
-        <div class="zwei" style="background-color:var(--headerColor);text-align:center;
-        border:1px solid; border-color: blue;border-style:inset">
+        <div class="menu" style="background-color:var(--headerColor);text-align:center;
+        border:1px solid; border-color: blue;">
         2
         </div>
-    <!--.................................        -->
+    <!--.................................border#f3f0e8        -->
         <div class="zeit" style="background-color:var(--headerColor);text-align:center;
-        border:1px solid; ;border-color: #f3f0e8;border-style:inset">
-            3
-
+        border:1px solid; ;border-color:black ;">
+            <time id="dieZeit" style="color:#154779; padding-top:8px;
+               border-top:4px;
+                font-family:'Barlow Condensed';
+                ;font-size:10;font-weight:bold;
+                text-shadow:1px 1px 1px #ababab;
+                text-align:center;
+                margin-left:auto;
+                margin-top:10px;
+                "></time>
         </div>
      <!--.................................        -->
         <div class="vier" style="background-color:var(--headerColor);text-align:center;
-         border:1px solid; border-color: green;border-style:inset">
+         border:1px solid; border-color: green;">
             4
         </div>
           <!--.................................        -->
          <div class="funf" style="background-color:var(--headerColor);text-align:center;
-         border:1px solid; border-color: red;border-style:inset">
+         border:1px solid; border-color: red;">
             5
         </div>
 
@@ -130,7 +139,7 @@ background-image:url("arc/vidrio1.jpg");
 <hr/>
 
 <p id="fenster0"  style="
-                font-family:Sofia;font-size:12px;font-weight:bold;line-height:14px;
+                font-family:Sofia;font-size:14px;font-weight:bold;line-height:14px;
                 text-align:center;color:var(MPColor);width:90%; height:20px;">María Papel era así: prefería arrancarse una espina del corazón, a que arrancarse una idea del corazón.</p>
 
 
@@ -139,7 +148,7 @@ background-image:url("arc/vidrio1.jpg");
 <iframe class="ramka"     name="iframe_a" src="arc/Einleitung.html"
         title="Iframe Example"
 style=" border-style: groove;
-              border-width: 2px 3px; border-color: white; border-radius:2px";></iframe>
+              border-width: 2px 3px; border-color: white; border-radius:2px;"></iframe>
 
 <br/><br/>
   <hr style="color:red;border:1px solid"><hr/>
@@ -209,7 +218,7 @@ meses1=["enero","febrero","marzo","abril","mayo","junio",
 
 dias=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
 
-return dias[day]+ " "+ dayNr +" "+"de"+" "+meses1[mesNr]+". "+anno;
+return dias[day]+ " "+ dayNr +" "+"de"+" "+meses1[mesNr]+" "+ anno;
 }
 </script>
 <br/><br/>

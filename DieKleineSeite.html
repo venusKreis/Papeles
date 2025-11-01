@@ -125,9 +125,10 @@ background-image:url("arc/vidrio1.jpg");
                 "></time>
         </div>
      <!--.................................        -->
-        <div class="vier" style="background-color:var(--headerColor);text-align:center;
-         border:1px solid; border-color: green;">
-            4
+        <div id="bigornia" class="vier" style="background-color:var(--headerColor);text-align:center;
+         border:1px solid; border-color: green;font-family:Ariel; font-size:10;
+        color:green; data-item='🛠️ Voiguevoe förlag, ©ISBN 978-91-639-4401-7, 2025'; ">
+            <img src="arc/BigPerf22.png" alt="Big2" style="width:24px;height:24px;cursor:pointer">
         </div>
           <!--.................................        -->
          <div class="funf" style="background-color:var(--headerColor);text-align:center;
@@ -179,7 +180,7 @@ window.onclick = function(event) {
 
 
 
-   <script>
+  <script>
      const imagen = document.getElementById('bigornia');
 
     function desvanecer(){
@@ -190,7 +191,7 @@ window.onclick = function(event) {
 
     function restaurar(){
     imagen.style.opacity = '1';
-    document.getElementById('fenster0').innerHTML = ""
+    document.getElementById('fenster0').innerHTML = "María Papel era así: prefería arrancarse una espina del corazón, a que arrancarse una idea del corazón."
     };
 
     imagen.addEventListener('pointerdown', desvanecer);

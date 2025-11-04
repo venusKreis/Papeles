@@ -5,224 +5,156 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>DasReineBlatt Nov</title>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|emboss">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family='Barlow Condensed'">
-<link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css">
 <!--    <script src="script.js"></script>-->
 
 
-    <title>DasReineBlatt Oct</title>
+
 
     <style>
-    :root{
-     --dieZeit:#154779;
-     --colorNav:#efefef;
-     --AntiqueWhite:#E3E4FA;
-     --bodyColor:#fdf5e0;
-     --headerColor:#F8F9F5;
-     --MPColor:#1d364d;
-     }
-<!--last:fff5f6,B0E0E6(azul),E3E4FA(OK)-->
-<!-#E3E4FA-,F8F9F5(gris1,OK),DEE1E2(gris2)-->
-    * {
-  box-sizing: border-box;
-    }
-.header {
-display:flex:
-  margin-top:2px;
-  margin-left:4px;
-  padding-top: 1px;
-  text-align: center;
-  height:14vh;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-<!--  align-items:center;-->
+     :root {
+  --dieZeit:#154779;
+  --colorNav:#efefef;
+  --AntiqueWhite:#E3E4FA;
+  --bodyColor:#fdf5e0;
+  --headerColor:#F8F9F5;
+  --MPColor:#1d364d;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ /* HEADER */
+.header {
+     display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14vh;
+  margin-left:4px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  background-color: var(--headerColor);
+}
+
 
 .nav{
 display:flex;
 width:100%
-
-margin-left:4px;
  height:8vh;
+ margin-left:4px;
  align-items:center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: var(--headerColor);
+
 box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
      rgba(0, 0, 0, 0.22) 0px 2px 2px;
 
 }
-.nav div:nth-of-type(1) {flex-grow: 1;}
-.nav div:nth-of-type(2) {flex-grow: 2;}
-.nav div:nth-of-type(3) {flex-grow: 4;}
-.nav div:nth-of-type(4) {flex-grow: 2;}
-.nav div:nth-of-type(5) {flex-grow: 1;}
+.nav div {
+  flex: 1;
+  text-align: center;
+  border: 1px solid #0002;
+  padding: 4px;
+}
 
-
+/* FOOTER */
 .footer {
-display:flex;
-
-margin-left:4px;
-justify-content: space-around;
- box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
- margin-top:10px;
- margin-bottom:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  background-color: var(--headerColor);
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
 }
 
-.ramka{
-        width:98%;
-        height:90vh;
-        height:600px;
-        margin-left:4px;
-background-image:url("arc/vidrio1.jpg");
-         background-size:cover;
-    background-color:#f7ecd9;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+/* IFRAME */
+.ramka {
+  width: 95%;
+  height: 70vh;
+  margin-top: 10px;
+  border: 2px groove white;
+  border-radius: 4px;
+  background-image: url("arc/vidrio1.jpg");
+  background-size: cover;
+  background-color: #f7ecd9;
+  box-shadow: rgba(0,0,0,0.25) 0px 14px 28px,
+              rgba(0,0,0,0.22) 0px 10px 10px;
 }
 
+/* TEXTO CENTRAL */
+#fenster0 {
+  font-family: 'Sofia';
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  color: var(--MPColor);
+  width: 90%;
+  margin: 10px auto;
+  text-align: center;
+}
 
 </style>
 </head>
 
+<body>
+  <header class="header">
+    <p class="ersterTitel" style="color:var(--MPColor);">María Papel</p>
+  </header>
 
-<body style="background-color:var(--bodyColor);
-        ">
+  <hr/>
 
+  <nav class="nav">
+    <div>1</div>
+    <div>2</div>
+    <div>
+      <time id="dieZeit" style="color:#154779;font-family:'Barlow Condensed';font-size:12px;font-weight:bold;"></time>
+    </div>
+    <div id="bigornia">
+      <img src="arc/BigPerf22.png" alt="Big2" style="width:24px;height:24px;cursor:pointer;">
+    </div>
+    <div>🛠️</div>
+  </nav>
 
+  <hr/>
 
-<!--alabaster,-->
-    <header class="header" style="background-color:var(--headerColor);" >
+  <p id="fenster0">María Papel era así: prefería arrancarse una espina del corazón, a que arrancarse una idea del corazón.</p>
 
-            <p class="ersterTitel" style="color:var(--MPColor); text-align:center;margin-top:4px;">María Papel</p>
+  <iframe class="ramka" name="iframe_a" src="arc/Einleitung.html" title="Iframe Example"></iframe>
 
-    </header>
+  <hr/>
 
-    <hr/>
-
-
-    <nav class="nav" style="background-color:var(--headerColor);">
-            <!--home, bars-->
-        <div class="eins" style="background-color:var(--headerColor);text-align:center;
-         border:1px solid; border-color: blue;">
-            1
-        </div>   <!--home, bars-->
-    <!--.................................        -->
-
-        <div class="menu" style="background-color:var(--headerColor);text-align:center;
-        border:1px solid; border-color: blue;">
-        2
-        </div>
-    <!--.................................border#f3f0e8        -->
-        <div class="zeit" style="background-color:var(--headerColor);text-align:center;
-        border:1px solid; ;border-color:black ;">
-            <time id="dieZeit" style="color:#154779; padding-top:8px;
-               border-top:4px;
-                font-family:'Barlow Condensed';
-                ;font-size:10;font-weight:bold;
-                text-shadow:1px 1px 1px #ababab;
-                text-align:center;
-                margin-left:auto;
-                margin-top:10px;
-                "></time>
-        </div>
-     <!--.................................        -->
-        <div id="bigornia" class="vier" style="background-color:var(--headerColor);text-align:center;
-         border:1px solid; border-color: green;font-family:Ariel; font-size:10;
-        color:green; data-item='🛠️ Voiguevoe förlag, ©ISBN 978-91-639-4401-7, 2025'; ">
-            <img src="arc/BigPerf22.png" alt="Big2" style="width:24px;height:24px;cursor:pointer">
-        </div>
-          <!--.................................        -->
-         <div class="funf" style="background-color:var(--headerColor);text-align:center;
-         border:1px solid; border-color: red;">
-            5
-        </div>
-
-    </nav>
-<hr/>
-
-<p id="fenster0"  style="
-                font-family:Sofia;font-size:14px;font-weight:bold;line-height:14px;
-                text-align:center;color:var(MPColor);width:90%; height:20px;">María Papel era así: prefería arrancarse una espina del corazón, a que arrancarse una idea del corazón.</p>
-
-
-<br/>
-
-<iframe class="ramka"     name="iframe_a" src="arc/Einleitung.html"
-        title="Iframe Example"
-style=" border-style: groove;
-              border-width: 2px 3px; border-color: white; border-radius:2px;"></iframe>
-
-<br/><br/>
-  <hr style="color:red;border:1px solid"><hr/>
-
-<footer class="footer" style="background-color: var(--colorX);">FOOTER
-</footer>
-
-  <hr style="color:red;border:1px solid"><hr/>
-<script>
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
-
-
+  <footer class="footer">FOOTER</footer>
 
   <script>
-     const imagen = document.getElementById('bigornia');
+  // mostrar fecha
+  function fecha() {
+    let d = new Date();
+    let dias = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+    let meses = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+    return dias[d.getDay()] + " " + d.getDate() + " de " + meses[d.getMonth()] + " " + d.getFullYear();
+  }
+  document.getElementById("dieZeit").innerHTML = fecha();
 
-    function desvanecer(){
-    imagen.style.opacity = '0.1';
-    document.getElementById('fenster0').innerHTML = " 🛠️ Voiguevoe förlag\
-    ©ISBN 978-91-639-4401-7"
-    }
-
-    function restaurar(){
+  // imagen: fade + texto dinámico
+  const imagen = document.getElementById('bigornia').querySelector('img');
+  imagen.addEventListener('pointerdown', () => {
+    imagen.style.opacity = '0.3';
+    document.getElementById('fenster0').textContent = "🛠️ Voiguevoe förlag ©ISBN 978-91-639-4401-7";
+  });
+  imagen.addEventListener('pointerup', () => {
     imagen.style.opacity = '1';
-    document.getElementById('fenster0').innerHTML = "María Papel era así: prefería arrancarse una espina del corazón, a que arrancarse una idea del corazón."
-    };
-
-    imagen.addEventListener('pointerdown', desvanecer);
-    imagen.addEventListener('pointerup',restaurar);
-    imagen.addEventListener('pointerleave',restaurar);
-    imagen.addEventListener('pointercancel',restaurar);
-
-       //táctiles, {passive, true}- molesta en la computadora
-
-    imagen.addEventListener('touchstart', desvanecer);
-    imagen.addEventListener('touchend',restaurar);
-    imagen.addEventListener('touchcancel',restaurar)
-
+    document.getElementById('fenster0').textContent = "María Papel era así: prefería arrancarse una espina del corazón, a que arrancarse una idea del corazón.";
+  });
+  imagen.addEventListener('pointerleave', () => {
+    imagen.style.opacity = '1';
+    document.getElementById('fenster0').textContent = "María Papel era así: prefería arrancarse una espina del corazón, a que arrancarse una idea del corazón.";
+  });
   </script>
-<!---->
-<script>
-document.getElementById("dieZeit").innerHTML=fecha();
-function fecha() {
-let anno= new Date().getFullYear();
-let dayNr= new Date().getDate();
-let mesNr= new Date().getMonth();
-let day = new Date().getDay();
-meses1=["enero","febrero","marzo","abril","mayo","junio",
-      "julio","agosto","septiembre","octubre","noviembre","diciembre"];
-
-dias=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
-
-return dias[day]+ " "+ dayNr +" "+"de"+" "+meses1[mesNr]+" "+ anno;
-}
-</script>
-<br/><br/>
-
 </body>
 </html>

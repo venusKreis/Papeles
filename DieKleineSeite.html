@@ -19,7 +19,7 @@
      :root {
   --dieZeit:#154779;
   --colorNav:#efefef;
-  --AntiqueWhite:#E3E4FA;
+  --weissEins:#E3E4FA;
   --bodyColor:#fdf5e0;
   --headerColor:#F8F9F5;
   --MPColor:#1d364d;
@@ -38,7 +38,7 @@
   height: 14vh;
   margin-left:4px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  background-color: var(--headerColor);
+  background-color: var(--AntiqueWhite);
 }
 
 
@@ -50,7 +50,7 @@ width:100%
  align-items:center;
   justify-content: space-between;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  background-color: var(--headerColor);
+  background-color: var(--AntiqueWhite);
 
 box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
      rgba(0, 0, 0, 0.22) 0px 2px 2px;
@@ -78,6 +78,7 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
   width: 95%;
   height: 70vh;
   margin-top: 10px;
+  margin-left:12px;
   border: 2px groove white;
   border-radius: 4px;
   background-image: url("arc/vidrio1.jpg");
@@ -98,7 +99,71 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
   margin: 10px auto;
   text-align: center;
 }
+   /*.........................................*/
+    dropbtn {
+  background-color:#3498DB ;
+  color: white;
+  padding: 2px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-bottom:2px;
+  margin-left:10px;
+border-radius: 8px;
+transition-duration: 0.4s;
 
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #bddeda;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  background-image: linear-gradient( 111.9deg,  rgba(248,248,240,1) 80.9%,
+  rgba(187,187,187,1) 116.8% );
+<!--  background-image: url("arc/papelAgua0.jpg");-->
+  display:flex;          <!--achtung-->
+   align-items:center;
+  font-family:'Barlow Condensed';
+  text-shadow:3px 3px 3px #ababab;
+  font-size:3vw;
+  font-weight:bold;
+  min-width: 160px;
+  overflow: auto;
+<!--  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);-->
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #154779;
+  padding: 12px 16px;
+  text-decoration: none;
+  background-color:transparent;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+#menuButton {
+<!--  padding: 10px 20px;-->
+  font-size: 24px;
+  cursor: pointer;
+}
+#menuButton i {
+  pointer-events: none; /* <<< Esto es lo importante */
+}
+    /*.........................................*/
 </style>
 </head>
 
@@ -110,7 +175,31 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
   <hr/>
 
   <nav class="nav">
-    <div>1</div>
+    <div>
+        <div class="hause" style="background-color:AntiqueWhite;">   <!--home, bars-->
+                <div class="dropdown">
+                <button id="menuButton" style="margin-left:12px;border-radius: 4px;
+                border: none;color:white;" onclick="myFunction()" class="dropbtn">
+                <i class='fas fa-bars'
+                style='font-size:20px;color:brown; style="background-color:Cornsilk;
+               '></i>
+                </button>
+            <br/>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="arc/Einleitung.html" target="iframe_a">Prólogo</a>
+                    <a href="arc/cap1.html" target="iframe_a">Acerca</a>
+                    <a href="arc/cap2Kort.html" target="iframe_a">Don Alfonso</a>
+                    <a href="arc/cap9.html" target="iframe_a">María</a>
+                    <a href="arc/cap14.html" target="iframe_a">Escuela de niñas</a>
+                    <a href="arc/cap19.html" target="iframe_a">Felipe Asís</a>
+                </div>
+                </div>   <!--dropdown-->
+        </div>   <!--home, bars-->
+
+
+
+
+    </div>
     <div>2</div>
     <div>
       <time id="dieZeit" style="color:#154779;font-family:'Barlow Condensed';font-size:12px;font-weight:bold;"></time>
@@ -130,7 +219,27 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
   <hr/>
 
   <footer class="footer">FOOTER</footer>
+<!--.........................-->
+  <script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<!--  -->
   <script>
   // mostrar fecha
   function fecha() {

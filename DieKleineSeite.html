@@ -6,30 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Flamenco">
-
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Antic Didone">
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family='Barlow Condensed'">
-     <link rel="stylesheet" href="kleineStyles.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|emboss">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family='Barlow Condensed'">
+<link rel="stylesheet" href="estilo.css">
+<!--    <script src="script.js"></script>-->
 
 
-    <title>DieKleineFetch</title>
+    <title>DieKleineMP2</title>
 
     <style>
-
-:root{
-     --azul1:#4682b4;
-     --turquesa: #AFEEEE;
-
-
-     --bodyColor:#fdf5e0;
-    --headerColor:#F8F9F5;
-     --colorNav:#FAEBD7;
-     --dieZeit:#154779;
-     --blancoRosario:#FFFFF0;
-
-     }
 
 
 .header {
@@ -43,14 +28,13 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   align-items:center;
 }
-
 .nav{
 display:flex;
 margin-left:4px;
  margin-right:4px;
  height:6vh;
 background-color:green;
-
+<!-- var(&#45;&#45;headerColor);-->
 box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
      rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
@@ -89,11 +73,10 @@ border-radius: 8px;
 transition-duration: 0.4s;
 
 }
-<!--#8de8dd; sobre menu button-->
-.dropbtn:hover, .dropbtn:focus {
-  background-color: transparent;
-}
 
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #8de8dd;
+}
 
 .dropdown {
   position: relative;
@@ -103,19 +86,18 @@ transition-duration: 0.4s;
 .dropdown-content {
   display: none;
   position: absolute;
-
-  text-align:left;
-  align-items:left;
-
-
+  background-color: #f1f1f1;
+  background-image: linear-gradient( 111.9deg,  rgba(248,248,240,1) 80.9%,
+  rgba(187,187,187,1) 116.8% );
+  <!display:flex;          --achtung-->
+   align-items:center;
   font-family:'Barlow Condensed';
   text-shadow:3px 3px 3px #ababab;
   font-size:3vw;
-  margin-top:3.2vh;
-
   font-weight:bold;
   min-width: 160px;
   overflow: auto;
+<!--  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);-->
   z-index: 1;
 }
 
@@ -146,7 +128,6 @@ transition-duration: 0.4s;
 <!--  border-radius: 4px;-->
   padding: 5px;
 }
-
 .hause {
     display:flex;
     align-items:center;
@@ -163,6 +144,22 @@ transition-duration: 0.4s;
 }
 
 
+/* IFRAME */
+.ramka {
+  width: 95%;
+  height: 70vh;
+  margin-top: 10px;
+  margin-left:14px;
+  margin-right:4px;
+  border: 2px groove white;
+  border-radius: 4px;
+  background-image: url("arc/vidrio1.jpg");
+  background-size: cover;
+  background-color: #f7ecd9;
+  box-shadow: rgba(0,0,0,0.25) 0px 14px 28px,
+              rgba(0,0,0,0.22) 0px 10px 10px;
+}
+
 .texto{
 
 height: auto;
@@ -177,15 +174,15 @@ margin-left:10px;
 margin-right: 10px;
 text-align: center;
 word-wrap:normal;
+<!--background-color:red;  funciona-->
 }
-
 
  #bigornia {
       height: auto;
       transition: opacity 0.8s ease;
     }
 
-<!-- MENU BAJO-->
+<!-- menú bajo-->
 
  .menu {
       display: inline-block;
@@ -219,32 +216,8 @@ word-wrap:normal;
     }
 
     .menu-item:hover {
-      color: transparent; /* azul iPhone */
+      color: #007aff; /* azul iPhone */
     }
-
-  #inhalt{
-    width:92%;
-    height:94%;
-   font-family:'Georgia','Segoe UI', Tahoma, Verdana, sans-serif;
-   font-size: 24px;
-   color: rgb(7, 27, 78);
-   padding:10px 10px;
-   margin-left:22px;
-   margin-right: 26px;
-   text-align: center;
-   word-wrap:normal;
-}
-.btnLi{
-border:none;
-text-align:left;
-font-family:'Barlow Condensed';
-text-shadow:3px 3px 3px #ababab;
- font-size:2.5vw;
- line-height:16px;
- background-color:transparent;
-<!-- dorado-->
- color:#7f690b;
-}
 </style>
 </head>
 
@@ -276,33 +249,16 @@ text-shadow:3px 3px 3px #ababab;
                 style='font-size:20px;color:brown; background-color:white'></i>
                 </button>
             <br/>
-                <div id="myDropdown" class="dropdown-content" style="border: none;">
-
-<!--                <button  class="btnLi" ></button>-->
-                <button  class="btnLi" onclick="cargarContenido('arc/Einleitung.html')">Introducción...</button><br/>
-                <button  class="btnLi" onclick="cargarContenido('arc/cap1.html')">Los Papeles...</button><br/>
-                <button  class="btnLi" onclick="cargarContenido('arc/cap2Kort.html')">Don Alfonso</button><br/>
-                <button  class="btnLi" onclick="cargarContenido('arc/cap9.html')">Quién era María</button><br/>
-                <button  class="btnLi" onclick="cargarContenido('arc/cap14.html')">Escuela de niñas</button><br/>
-                <button  class="btnLi" onclick="cargarContenido('arc/cap19.html')">Felipe Asís</button><br/>
-
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="arc/Einleitung.html" target="iframe_a">Prólogo</a>
+                    <a href="arc/cap1.html" target="iframe_a">Acerca</a>
+                    <a href="arc/cap2Kort.html" target="iframe_a">Don Alfonso</a>
+                    <a href="arc/cap9.html" target="iframe_a">María</a>
+                    <a href="arc/cap14.html" target="iframe_a">Escuela de niñas</a>
+                    <a href="arc/cap19.html" target="iframe_a">Felipe Asís</a>
                 </div>
                 </div>   <!--dropdown-->
         </div>   <!--home, bars-->
-
-        <script>
-        function cargarContenido(archivo) {
-            fetch(archivo)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("inhalt").innerHTML = data;
-                   // document.querySelector("#inhalt").classList.add("kleineStyles.css");
-                })
-                .catch(error => {
-                   document.getElementById("inhalt").innerHTML = "Error al cargar el contenido.";
-                });
-        }
-        </script>
 
 
         <div class="buch" style="background-color:#FFFFF0;">
@@ -318,15 +274,14 @@ padding-left:2px;"
                     <!--   está vacío         -->
         </div>
         <div style="background-color:#FFFFF0;">
-            <div style="border-top:2px;padding-top:10px;">
-               <time id="dieZeit" style="color:#154779;
-
+            <div style="border-top:2px;">
+               <time id="dieZeit" style="color:#154779; padding-top:4px;
+               border-top:4px;
                 font-family:'Barlow Condensed';
                 ;font-size:10;font-weight:bold;
                 text-shadow:1px 1px 1px #ababab;
-                padding-top:4px;
+                padding.top:4px;
                 padding-left:24px;
-                margin-top:10px;
                 margin-left:20px;
                 "></time>
                                 <!--  font-size:2.5vw;  -->
@@ -349,46 +304,7 @@ padding-left:2px;"
             </span>
 <!--        <hr style="border:2px;background-color:green;color:green;"/>-->
 <br/><br/>
-
-<!--<iframe class="ramka"    src="arc/Einleitung.html" name="iframe_a"  title="Iframe Example"></iframe>-->
-
-<article id="inhalt" style="
-    background-image:url(arc/vidrio1.jpg);">
-   <br/><br/>
-
- <p style="text-align: center;color:red;">☀︎</p>
-<p class="texto" style="text-align: center"><br/>La última edición del libro <i>María Papel</i> (©ISBN 978-91-639-4401-7) quedó ordenada en 47 capítulos breves.
-<br/><span>Estoy</span> seguro de que aún hoy, en 2025, siguen habiendo niños —y adultos— en el mundo, que juegan con volantines. Pienso que los volantines no tienen nada que ver con la edad o con el tiempo. Simplemente son objetos que alguna vez llenaron nuestra infancia y que ahora llenan la infancia de otros niños. Nada más.
-
-<br/><span>En</span> general los volantines suelen dormir colgados en la pared, igual que un trofeo de papel, en invierno, o suelen andar volando en el cielo, en primavera.
-<br/><span>Otra</span> cosa no saben hacer.
-<br/><span>En</span> vano tratan los expertos de examinarlos bajo lupa, por si acaso, ya que los volantines tienen el defecto de absorber la atención de la gente.
-
-<br/><span>La</span> imagen surrealista que deja de ellos el capitán Falcón, en sus <i>Apuntes de ayer</i>, es increíblemente curiosa: uno se ve casi obligado a poner oído a sus ideas.
-
-<br/><span>¿Quién</span> no ha escuchado alguna vez, entre los volantineros de Quillota, el nombre de Horacio Falcón, famoso en la década del 60 por sus pacotillas aéreas?
-Hijo de un herrero intelectual, oriundo de El Cobre, huérfano de madre, vivía con doña Pilar Novoa, su tía y madrina, en la calle Bulnes, casi tocando una vereda de Esmeralda. Todos lo conocían: era un hijo de la mansedumbre, de la honradez, un franco y simple amigo; lo cual no explica, en absoluto, ese afán de algunos <i>historiadores</i> locales de querer pintar a don Horacio Falcón como se pintan a los héroes desgarrados de la literatura inglesa (ref. Charles Dickens), o como a un infeliz vástago de la miseria latinoamericana, fruto del abatimiento e injusticia sociales.
-        <br/><span>Mentiras</span> redondas.
-<br/><span>El</span> niño Horacio, así como tantos otros niños de su generación, consume los días bajo soles, entre juegos y lunas, rodeado por una tranquila humanidad. Vive en el domicilio de una madrina gorda, que tiene dos hijas; una madrina que no es fea ni mala ni bruja, y que barre la acera con una escoba, día por medio.
-El universo de Horacio Falcón lo conforman los animales del patio, los amigos del barrio, los amigos de la escuela, el cerro Mayaca, los juegos eternos. Todo lo que falta, a su rededor, lo construye en su fantasía o lo inventa.
-<br/>No es necesario sumergirse demasiado en las páginas de sus apuntes para detectar, ya de lejos, de que existe un sospechoso acercamiento del héroe con el reino animal: —la <i>Sevillana</i>, <i>Peldegüe</i>, los gatos— y en concreto, un nítido acercamiento hacia la Naturaleza: flores, aves, arañas, incluso árboles, obscuridad y estrellas.
-
-<br/><span>El</span> advenimiento de María Papel en la vida del joven Horacio, se manifiesta, las primeras veces, igual que un brote caprichoso, o indefinido, del espíritu. Sin embargo, después de algunos meses (o años) el brote va tomando forma hasta alcanzar aquella forma exacta que todos acaban por aceptar en medio de alegres suspiros y voces.
-<br/> Ya a nadie le parece raro de que el joven Horacio se enamore de un volantín.
-<br/><span>Escribe</span> el capitán Falcón en su diario de vida: "En un cielo lleno de volantines se ve el futuro; pero hay gente que ve allí el pasado. Nunca faltan.
-<br/><span>Son</span> los <i>volantineros</i>."
-<br/><span>De</span> ellos se trata este libro.
-    <br/>
-<br/>
-
-</p>
-<p style="text-align:left;font-family:Ariel;font-size:14px;color:#2d487a;">🪁 El autor: Marco Villarroel Bruna, 2025</p>
-<p style="text-align:center;font-size:24;color:#536878;">✴︎</p>
-    <br/>
-
-<br/>
-</article>
-
+<iframe class="ramka"    src="arc/Einleitung.html" name="iframe_a"  title="Iframe Example"></iframe>
 
 <script>
 function myFunction() {
@@ -410,9 +326,8 @@ window.onclick = function(event) {
 }
 </script>
 
-<footer class="footer"
-        style="background-color: var(--headerColor);margin-bottom:4px;">
-<img src="arc/vol1.png" width="34px" height="34px" alt="vol1">
+<footer class="footer" style="background-color: var(--headerColor);">
+
 </footer>
 
 <!---->

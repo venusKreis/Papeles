@@ -12,17 +12,34 @@
 <!--    <script src="script.js"></script>-->
 
 
-    <title>DieKleineMP2</title>
+    <title>KleineSeite-nov</title>
 
     <style>
+    :root{
+         --suave1: #eeede6;
+         --suave2: #e73304;
+         --gelb0:  #FBE8A6;
+     --gelb: #FBE8A6;
+     --turquesa: #AFEEEE;
+     --palegold: #EEE8AA;
+     --colorX: #e7e3d4;
+     --colorHeader:#e6e2d8;
+     --colorNav:#FAEBD7;
+     --dieZeit:#154779;
 
+
+     }
+
+
+    * {
+  box-sizing: border-box;
+    }
 
 .header {
   display:flex;
-  background-color: var(--headerColor);
+  background-color: var(--colorX);
   margin-top:4px;
-  margin-left:4px;
-  margin-right:4px;
+  padding-top: 4px;
   text-align: center;
   height:14vh;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -31,17 +48,11 @@
 .nav{
 display:flex;
 margin-left:4px;
- margin-right:4px;
  height:6vh;
-background-color:green;
-<!-- var(&#45;&#45;headerColor);-->
+background-color: var(--colorNav);
 box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
      rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-
-
-
-
 .nav div:nth-of-type(1) {flex-grow: 1;}
 <!--.nav div:nth-of-type(2) {flex-grow: 1;}
 .nav div:nth-of-type(3) {flex-grow: 1;}-->
@@ -58,10 +69,13 @@ justify-content: space-around;
 }
 
 
-    /*..........#3498DB ..............................*/
+.sobremouse:hover {
+  cursor: pointer;
+  opacity:0.25;
+}
+    /*.........................................*/
     dropbtn {
-  background-color:white;
-
+  background-color:#3498DB ;
   color: white;
   padding: 2px;
   font-size: 16px;
@@ -75,7 +89,8 @@ transition-duration: 0.4s;
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #8de8dd;
+  background-color:transparent;
+<!--  #bddeda;-->
 }
 
 .dropdown {
@@ -89,12 +104,15 @@ transition-duration: 0.4s;
   background-color: #f1f1f1;
   background-image: linear-gradient( 111.9deg,  rgba(248,248,240,1) 80.9%,
   rgba(187,187,187,1) 116.8% );
-  <!display:flex;          --achtung-->
+<!--  background-image: url("arc/papelAgua0.jpg");-->
+  display:flex;          <!--achtung-->
    align-items:center;
   font-family:'Barlow Condensed';
   text-shadow:3px 3px 3px #ababab;
   font-size:3vw;
   font-weight:bold;
+
+  margin-top:12px;
   min-width: 160px;
   overflow: auto;
 <!--  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);-->
@@ -103,8 +121,9 @@ transition-duration: 0.4s;
 
 .dropdown-content a {
   color: #154779;
-  padding: 18px 16px;
+  padding: 12px 16px;
   text-decoration: none;
+  padding-top:16px;
   background-color:transparent;
   display: block;
 }
@@ -132,8 +151,8 @@ transition-duration: 0.4s;
     display:flex;
     align-items:center;
     justify-content:center;
-
-
+    <!--box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+     rgba(0, 0, 0, 0.22) 0px 10px 10px;-->
 }
 .buch {
     display:flex;
@@ -142,24 +161,14 @@ transition-duration: 0.4s;
     <!--box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
      rgba(0, 0, 0, 0.22) 0px 10px 10px;-->
 }
+.ramka{
 
-
-/* IFRAME */
-.ramka {
-  width: 95%;
-  height: 70vh;
-  margin-top: 10px;
-  margin-left:14px;
-  margin-right:4px;
-  border: 2px groove white;
-  border-radius: 4px;
-  background-image: url("arc/vidrio1.jpg");
-  background-size: cover;
-  background-color: #f7ecd9;
-  box-shadow: rgba(0,0,0,0.25) 0px 14px 28px,
-              rgba(0,0,0,0.22) 0px 10px 10px;
+        width:100%;
+        height:68vh;
+        background-color:#f7ecd9;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+        rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-
 .texto{
 
 height: auto;
@@ -178,9 +187,15 @@ word-wrap:normal;
 }
 
  #bigornia {
+       cursor: pointer;
       height: auto;
       transition: opacity 0.8s ease;
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
     }
+span:hover + label {
+  display: block;
+}
 
 <!-- menú bajo-->
 
@@ -218,15 +233,26 @@ word-wrap:normal;
     .menu-item:hover {
       color: #007aff; /* azul iPhone */
     }
+
+
+span:hover + label{
+  display: block;
+}
+        label:hover{
+        display: block;
+        }
+        #ppp{
+        display: block;
+        }
 </style>
 </head>
 
 
-<body style="background-color:var(--headerColor)">
+<body style="background-color:#f0f0e9;cursor: pointer;">
 
 <section>
 
-    <header class="header" style="background-color:var(--headerColor);">
+    <header class="header" style="background-color:AntiqueWhite;">
         <!--e6e2d8,F1ECD9-->
             <h1></h1>
             <p class="ersterTitel">María Papel</p>
@@ -238,15 +264,16 @@ word-wrap:normal;
 
     <hr/>
 
-<!--#F8F9F5; a todas las partes cambiar-->
-    <nav class="nav" style="background-color:white;" >
 
-        <div class="hause" style="background-color:white;">   <!--home, bars-->
+    <nav class="nav" style="background-color:#efefef;">
+
+        <div class="hause" style="background-color:AntiqueWhite;">   <!--home, bars-->
                 <div class="dropdown">
                 <button id="menuButton" style="margin-left:12px;border-radius: 4px;
                 border: none;color:white;" onclick="myFunction()" class="dropbtn">
                 <i class='fas fa-bars'
-                style='font-size:20px;color:brown; background-color:white'></i>
+                style='font-size:20px;color:brown; style="background-color:Cornsilk;
+               '></i>
                 </button>
             <br/>
                 <div id="myDropdown" class="dropdown-content">
@@ -261,7 +288,7 @@ word-wrap:normal;
         </div>   <!--home, bars-->
 
 
-        <div class="buch" style="background-color:#FFFFF0;">
+        <div class="buch" style="background-color:AntiqueWhite;">
 <!--            <i class="fas fa-book-open reader" style="font-size:20px;color:blue;-->
 <!--            background-color:#efefef;cursor:pointer;"></i>-->
             <img id="bigornia" src="arc/BigPerf22.png"
@@ -270,27 +297,34 @@ word-wrap:normal;
 padding-left:2px;"
                 alt="Big2">
         </div>
-        <div style="background-color:var(--blancoRosario);">
-                    <!--   está vacío         -->
+        <div style="background-color:AntiqueWhite;">
+
         </div>
-        <div style="background-color:#FFFFF0;">
+        <div style="background-color:AntiqueWhite;">
             <div style="border-top:2px;">
-               <time id="dieZeit" style="color:#154779; padding-top:4px;
+               <time id="dieZeit" style="color:#154779;; padding-top:4px;
                border-top:4px;
                 font-family:'Barlow Condensed';
                 ;font-size:10;font-weight:bold;
                 text-shadow:1px 1px 1px #ababab;
-                padding.top:4px;
-                padding-left:24px;
+                padding-left:80px;
                 margin-left:20px;
                 "></time>
                                 <!--  font-size:2.5vw;  -->
+            <span style="margin-left:40px; color:red;cursor:pointer;">⚙️</span>
+                <p id="ppp" style=" display:none">holaPPP</p>
+
+             <label style="margin-left:40px;color:darkslategrey;background-color:AntiqueWhite;width:200px;
+                font-family:Arial;font-size:12px;text-shadow:1px 1px 1px #ababab;display:none;
+                "><br/>
+    🛠️ Voiguevoe förlag,
+    ©ISBN 978-91-639-4401-7, 2025</label>
+        </div>
+ <p id="pp" style=" display:none">hola</p>
           </div>
 
-        </div>
-
     </nav>
-<hr/>
+
 
 </section>
 
@@ -298,13 +332,14 @@ padding-left:2px;"
 
 <hr/>
 
-<span id="fenster"  style="color:darkslategrey;margin-left:6px;
-                font-family:Arial;font-size:14px;text-shadow:1px 1px 1px #ababab;">
+<span id="fenster0"  style="color:darkslategrey;
+                font-family:Arial;font-size:12px;text-shadow:1px 1px 1px #ababab;">
                     <!-- font-size:   2vh   -->
             </span>
 <!--        <hr style="border:2px;background-color:green;color:green;"/>-->
 <br/><br/>
 <iframe class="ramka"    src="arc/Einleitung.html" name="iframe_a"  title="Iframe Example"></iframe>
+
 
 <script>
 function myFunction() {
@@ -326,7 +361,7 @@ window.onclick = function(event) {
 }
 </script>
 
-<footer class="footer" style="background-color: var(--headerColor);">
+<footer class="footer" style="background-color: var(--colorX);">
 
 </footer>
 
@@ -334,22 +369,30 @@ window.onclick = function(event) {
 
    <script>
 
-    const imagen = document.getElementById('bigornia');
+     const imagen = document.getElementById('bigornia');
 
-    imagen.addEventListener('mousedown', () => {
-      imagen.style.opacity = '0.1'; // Desvanecer lentamente
-       document.getElementById('fenster').innerHTML= " Marco Villarroel Bruna " + " (Voiguevoe förlag, 2025)" + " ☀︎  ©ISBN 978-91-639-4401-7"
-    });
+    function desvanecer(){
+    imagen.style.opacity = '0.1';
+    document.getElementById('fenster0').innerHTML = " 🛠️ Voiguevoe förlag\
+    ©ISBN 978-91-639-4401-7"
+    }
 
-    imagen.addEventListener('mouseup', () => {
-      imagen.style.opacity = '1'; // Recuperar lentamente
-       document.getElementById('fenster').innerHTML= "";
-    });
+    function restaurar(){
+    imagen.style.opacity = '1';
+    document.getElementById('fenster0').innerHTML = ""
+    };
 
-    // Por si el mouse se sale del área
-    imagen.addEventListener('mouseleave', () => {
-      imagen.style.opacity = '1';
-    });
+    imagen.addEventListener('pointerdown', desvanecer);
+    imagen.addEventListener('pointerup',restaurar);
+    imagen.addEventListener('pointerleave',restaurar);
+    imagen.addEventListener('pointercancel',restaurar);
+
+       //táctiles, {passive, true}- molesta en la computadora
+
+    imagen.addEventListener('touchstart', desvanecer);
+    imagen.addEventListener('touchend',restaurar);
+    imagen.addEventListener('touchcancel',restaurar)
+
   </script>
 <!---->
 <script>

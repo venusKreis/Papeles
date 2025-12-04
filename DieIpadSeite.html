@@ -1,47 +1,407 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Carmen</title>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|emboss">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat&effect=emboss">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handlee|Inconsolata&effect=3d-float">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family='Barlow Condensed'">
+
+    <script src="script.js"></script>
+
+
+    <title>IpadSeite-1</title>
+
+    <style>
+    :root{
+         --suave1: #eeede6;
+         --suave2: #e73304;
+         --gelb0:  #FBE8A6;
+     --gelb: #FBE8A6;
+     --turquesa: #AFEEEE;
+     --palegold: #EEE8AA;
+     --colorX: #e7e3d4;
+     --colorHeader:#fcf5c7;
+     --colorNav:#FAEBD7; /* #FAF0E6; */
+
+
+     }
+
+
+    * {
+  box-sizing: border-box;
+    }
+
+.header {
+  display:flex;
+  background-color: var(--colorX);
+  margin-top:4px;
+  padding-top: 4px;
+  text-align: center;
+  height:14vh;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  align-items:center;
+}
+.nav{
+display:flex;
+margin-left:4px;
+ height:6vh;
+background-color: var(--colorNav);
+}
+.nav div:nth-of-type(1) {flex-grow: 1;}
+.nav div:nth-of-type(2) {flex-grow: 1;}
+.nav div:nth-of-type(3) {flex-grow: 1;}
+.nav div:nth-of-type(4) {flex-grow: 6;}
+.nav div:nth-of-type(5) {flex-grow: 1;}
+.nav div:nth-of-type(6) {flex-grow: 1;}
+
+.footer {
+display:flex;
+
+  padding: 10px;
+  padding-left: 10px;
+  <!--text-align: left;
+  align-items:center;-->
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ margin-top:10px;
+ margin-bottom:10px;
+}
+.footer div:nth-of-type(1) {flex-grow: 1;}
+.footer div:nth-of-type(2) {flex-grow: 5;}
+.footer div:nth-of-type(3) {flex-grow: 1;}
+
+
+.ersterTitel{
+font-family: "Sofia", Palatino,sans-serif;
+font-size: 26px;
+text-shadow:3px 3px 3px #3d4749;
+text-align: center;
+color: brown;
+align-items:center;
+}
+.unterTitel{
+font-size:20px;
+text-shadow:1px 1px 1px #3d4749;
+font-family: 'Caveat',Palatino;
+font-weight:bolder;
+text-align: center;
+}
+.texto::first-letter {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: brown;
+
+}
+#contenido{
+    height:auto;
+    width:600;
+   font-family:'Georgia','Segoe UI', Tahoma, Verdana, sans-serif;
+   font-size: 24px;
+   color: rgb(7, 27, 78);
+   padding:10px 10px;
+   margin-left:26px;
+   margin-right: 26px;
+   text-align: center;
+   word-wrap:normal;
+}
+
+.epigrafe{
+    padding:30px 30px;
+   text-align: justify;
+   text-align: center; /*right;*/
+   font-family:Garamond, "Times New Roman", Times, serif;
+   font-size: 3vw;
+   line-height: 94%;
+   overflow: auto;
+   white-space: wrap;
+}
+
+.Schild{
+    font-family: 'Caveat';
+    font-weight:bolder;
+    font-size:36px;
+    text-align: center;
+}
+.sobremouse:hover {
+  cursor: pointer;
+  opacity:0.25;
+}
+    /*.........................................*/
+    dropbtn {
+  background-color:#3498DB ;
+  color: white;
+  padding: 2px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-bottom:2px;
+  margin-left:10px;
+<!-- border-radius: 2px;-->
+
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: aliceblue;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  background-image: linear-gradient( 111.9deg,  rgba(248,248,240,1) 80.9%,
+  rgba(187,187,187,1) 116.8% );
+<!--  background-image: url("arc/papelAgua0.jpg");-->
+  display:flex;          <!--achtung-->
+   align-items:center;
+  font-family:'Barlow Condensed';
+  text-shadow:3px 3px 3px #ababab;
+  font-size:3vw;
+  font-weight:bold;
+  min-width: 160px;
+  overflow: auto;
+<!--  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);-->
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #154779;
+  padding: 12px 16px;
+  text-decoration: none;
+  background-color:transparent;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+#menuButton {
+<!--  padding: 10px 20px;-->
+  font-size: 24px;
+  cursor: pointer;
+}
+#menuButton i {
+  pointer-events: none; /* <<< Esto es lo importante */
+}
+    /*.........................................*/
+.img {
+<!--  border: 1px solid #ddd;-->
+<!--  border-radius: 4px;-->
+  padding: 5px;
+}
+.hause {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    <!--box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+     rgba(0, 0, 0, 0.22) 0px 10px 10px;-->
+}
+.buch {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.ramka{
+
+        width:100%;
+        height:68vh;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.texto{
+
+height: auto;
+width:100%;
+font-family:'Palatino','Segoe UI', Tahoma, Verdana, sans-serif;
+font-size: 30px;
+color: rgb(7, 27, 78);
+
+padding:10px 10px;
+margin-top:20px;
+margin-left:10px;
+margin-right: 10px;
+text-align: center;
+word-wrap:normal;
+<!--background-color:red;  funciona-->
+}
+
+ #bigornia {
+      width: 40px;
+      height: auto;
+      transition: opacity 0.8s ease;
+    }
+</style>
 </head>
-<body>
 
-<br/><br/>
 
-<h2 style="text-align:center; color:#a8589c">Doña Carmen</h2>
-<p style="text-align:center; color:#445e96">🌹</p>
-<br/><br/>
-<h3 id="demo" style="text-align:center; color:#445e96"></h3>
-<h3 id="demo2" style="text-align:center; color:#c29a3c"></h3>
+<body style="background-color:#f0f0e9;">
 
-<h3 id="demo3" style="text-align:center; color:#c29a3c"></h3>
+<section>
+
+    <header class="header" style="background-color:#f9f6f2;">
+        <!--e6e2d8,F1ECD9-->
+            <h1></h1>
+            <p class="ersterTitel">Ipad Seite</p>
+             <p class="epigrafe"><i>María Papel era así:
+     prefería arrancarse una espina del corazón,
+     a que arrancarse una idea del corazón.</i></p>
+    </header>
 <br/>
 
+    <hr/>
+
+
+    <nav class="nav" style="background-color:#efefef;
+                display:flex;
+                align-items:center;align-content:center;">
+
+        <div class="hause" style="background-color:Cornsilk;">   <!--home, bars-->
+                <div class="dropdown">
+                <button id="menuButton" style="margin-left:8px;" onclick="myFunction()" class="dropbtn">
+                <i class='fas fa-bars'
+                style='font-size:20px;color:blue; style="background-color:Cornsilk;
+               '></i>
+                </button>
+            <br/>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="arc/Einleitung.html" target="iframe_a">Prólogo</a>
+                    <a href="arc/cap1.html" target="iframe_a">Acerca</a>
+                    <a href="arc/cap2Kort.html" target="iframe_a">Don Alfonso</a>
+                    <a href="arc/cap9.html" target="iframe_a">María</a>
+                    <a href="arc/cap14.html" target="iframe_a">Escuela de niñas</a>
+                    <a href="arc/cap19.html" target="iframe_a">Felipe Asís</a>
+                </div>
+                </div>   <!--dropdown-->
+        </div>   <!--home, bars-->
+
+
+        <div class="buch" style="background-color:Cornsilk;">
+            <i class="fas fa-book-open reader" style="font-size:20px;color:blue;
+            background-color:#efefef;cursor:pointer;"></i>
+        </div>
+        <div style="background-color:khaki;"></div>
+        <div style="background-color:AntiqueWhite;"></div>
+        <div style="background-color:lightgrey;"></div>
+        <div style="background-color:lightgrey;">🍀</div>
+    </nav>
+<hr/>
+
+</section>
+        <hr style="border:2px;background-color:green;color:green;"/>
+
+<hr/>
+<br/>
+<iframe class="ramka" src="arc/Einleitung.html" name="iframe_a"  title="Iframe Example"></iframe>
+
+
 <script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
-    const height = screen.height;
-    const width = screen.width;
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 
-    const innerWidth = window.innerWidth;
-    const innerHeight = window.innerHeight;
+<footer class="footer" style="background-color:#E1DBCB;">
+          <div style=";border-top:2px;">
+               <time id="dieZeit" style="color:#154779;; padding-top:4px;
+               border-top:1px;
+                font-family:'Barlow Condensed';
+                ;font-size:2.5vw;font-weight:bold;
+                text-shadow:1px 1px 1px #ababab;
+                "></time>
+            <!-- border-style:solid;border-width:1px;border-color:black;-->
+          </div>
+            <div style="padding-left:2px;">
+                <span style="color:green;">Ipad</span>
+            </div>
+       <div style="padding-left:120px;;align-items:right;">  <!-- #f1ecd9;-->
+        <img id="bigornia" src="arc/BigPerf22.png"
+                  style=" display:flex;align-items:right;width:34px;height:34px;cursor:pointer;"
+                alt="Big2">
+        </div>
+</footer>
 
 
-    const meinIdealW = (height)*2/3*0.9;
-    const meinIdealH = (height)*2/3*0.8;
+            <p id="fenster"  style="color:darkslategrey;
+                font-family:Arial;font-size:10px;text-shadow:1px 1px 1px #ababab;">
+                    <!-- font-size:   2vh   -->
+            </p>
 
-        let res1 = height.toPrecision(4);
-        let res2 = width.toPrecision(4);
+<!--class="font-effect-emboss"-->
 
-        let res3 = innerWidth.toPrecision(4);
-        let res4 = innerHeight.toPrecision(4);
+        <script>
+
+    const imagen = document.getElementById('bigornia');
+
+    imagen.addEventListener('mousedown', () => {
+      imagen.style.opacity = '0.1'; // Desvanecer lentamente
+       document.getElementById('fenster').innerHTML= "Voiguevoe förlag, 2025.<br/>"
+       //©ISBN 978-91-639-4401-7\";
+       //venuskreis@icloud.com;\"
+
+    });
+
+    imagen.addEventListener('mouseup', () => {
+      imagen.style.opacity = '1'; // Recuperar lentamente
+       document.getElementById('fenster').innerHTML= "";
+    });
+
+    // Por si el mouse se sale del área
+    imagen.addEventListener('mouseleave', () => {
+      imagen.style.opacity = '1';
+    });
+  </script>
+<script>
+  
+document.getElementById("dieZeit").innerHTML=fecha();
 
 
+function fecha() {
+let anno= new Date().getFullYear();
+let dayNr= new Date().getDate();
+let mesNr= new Date().getMonth();
+let day = new Date().getDay();
 
-   document.getElementById("demo").innerHTML ="<br>"+ "screen H ist= " +res4+ "<br>"+ "screenW ist= "+ res2+"<br>" ;
-   document.getElementById("demo2").innerHTML ="<br>"+ "innerW ist= " +res3+ "<br>"+ "innerH ist= "+ res4+"<br>";
+meses1=["enero","febrero","marzo","abril","mayo","junio",
+      "julio","agosto","septiembre","octubre","noviembre","diciembre"];
 
-     document.getElementById("demo3").innerHTML ="<br>"+ "idealW ist= " +meinIdealW+ "<br>"+ "idealH ist= "+ meinIdealH+"<br>";
+dias=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+
+return dias[day]+ " "+ dayNr +" "+"de"+" "+meses1[mesNr]+". "+"Año "+anno;
+
+}
 
 </script>
+<br/><br/>
+
+
+
 </body>
 </html>

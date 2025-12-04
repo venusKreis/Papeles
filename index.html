@@ -7,19 +7,27 @@
 <script>
 window.onload = function () {
 
+  const isMobileDevice_1 = /Android|iPhone/i.test(navigator.userAgent);
+  const isMobileDevice_2 = /iPad/i.test(navigator.userAgent);
+ //const screenWidth = window.screenWidth;
+  const screenWidth = window.innerWidth;
 
- // const h = screen.height;
- // const w = screen.width;
-
-
-      if(screen.width>screen.height)
-      {
-        window.location.href = "DieGrosseSeite.html";
-      }else
-      {
-       window.location.href = "DieKleineSeite.html";
-      }
-} //cierre
+  if (screenWidth <= 1024) {
+    if(isMobileDevice_1)
+    {
+    window.location.href = "DieKleineSeite.html";
+    }
+    else if (isMobileDevice_2){
+    window.location.href = "DieIpadSeite.html";
+    }
+    else{
+    window.location.href = "DieKleineSeite.html";
+    }
+  } //screen
+  else {
+    window.location.href = "DieGrosseSeite.html";
+  }
+}
 </script>
  </head>
  <body>

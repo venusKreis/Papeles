@@ -5,27 +5,37 @@
 
 
 <script>
-
-
 window.onload = function () {
-const isMobileDevice_1 = /Android|iPhone/i.test(navigator.userAgent);
-const isMobileDevice_2 = /iPad/i.test(navigator.userAgent);
 
-      if(screen.width>screen.height)
-      {
-        window.location.href = "DieGrosseSeite.html";
-      }
-     else
-      {
-	  if(isMobileDevice_1)
-       		window.location.href = ”DieKleineSeite.html";
-	 else if(isMobileDevice_2)
-		window.location.href = ”DieIpadSeite.html”;
-	else
-		window.location.href = ”DieKleineSeite.html";
-		
-      }
-} //function
+  const isIphone = /iPhone/i.test(navigator.userAgent);
+  const isAndroid = /Android/i.test(navigator.userAgent);
+
+  // Detección correcta de iPad (Safari moderno lo disfraza de Mac)
+  const isIpad =
+      /iPad/i.test(navigator.userAgent) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+  // Computadora 
+  if (screen.width > screen.height) {
+      window.location.href = "DieGrosseSeite.html";
+      return;
+  }
+
+  // iPhone
+  if (isIphone || isAndroid) {
+      window.location.href = "DieKleineSeite.html";
+      return;
+  }
+
+  // iPad
+  if (isIpad) {
+      window.location.href = "DieIpadSeite.html";
+      return;
+  }
+
+  // Otros dispositivos móviles
+  window.location.href = "DieKleineSeite.html";
+};
 </script>
 
  </head>

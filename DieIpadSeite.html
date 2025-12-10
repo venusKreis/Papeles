@@ -14,7 +14,7 @@
     <script src="script.js"></script>
 
 
-    <title>IpadSeite-1</title>
+    <title>IpadSeite-2</title>
 
     <style>
     :root{
@@ -27,8 +27,6 @@
      --colorX: #e7e3d4;
      --colorHeader:#fcf5c7;
      --colorNav:#FAEBD7; /* #FAF0E6; */
-
-
      }
 
 
@@ -49,8 +47,11 @@
 .nav{
 display:flex;
 margin-left:4px;
- height:6vh;
+ height:8vh;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 background-color: var(--colorNav);
+border: 4px groove green;
+  border-radius: 4px;
 }
 .nav div:nth-of-type(1) {flex-grow: 1;}
 .nav div:nth-of-type(2) {flex-grow: 1;}
@@ -97,43 +98,12 @@ text-align: center;
     color: brown;
 
 }
-#contenido{
-    height:auto;
-    width:600;
-   font-family:'Georgia','Segoe UI', Tahoma, Verdana, sans-serif;
-   font-size: 24px;
-   color: rgb(7, 27, 78);
-   padding:10px 10px;
-   margin-left:26px;
-   margin-right: 26px;
-   text-align: center;
-   word-wrap:normal;
-}
 
-.epigrafe{
-    padding:30px 30px;
-   text-align: justify;
-   text-align: center; /*right;*/
-   font-family:Garamond, "Times New Roman", Times, serif;
-   font-size: 3vw;
-   line-height: 94%;
-   overflow: auto;
-   white-space: wrap;
-}
 
-.Schild{
-    font-family: 'Caveat';
-    font-weight:bolder;
-    font-size:36px;
-    text-align: center;
-}
-.sobremouse:hover {
-  cursor: pointer;
-  opacity:0.25;
-}
+
     /*.........................................*/
-    dropbtn {
-  background-color:#3498DB ;
+    .dropbtn {
+<!--  background-color:#3498DB ;-->
   color: white;
   padding: 2px;
   font-size: 16px;
@@ -141,12 +111,13 @@ text-align: center;
   cursor: pointer;
   margin-bottom:2px;
   margin-left:10px;
-<!-- border-radius: 2px;-->
+ border-radius: 1px;
+ width:20px;
 
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: aliceblue;
+background-color: aliceblue;
 }
 
 .dropdown {
@@ -195,11 +166,7 @@ text-align: center;
   pointer-events: none; /* <<< Esto es lo importante */
 }
     /*.........................................*/
-.img {
-<!--  border: 1px solid #ddd;-->
-<!--  border-radius: 4px;-->
-  padding: 5px;
-}
+
 .hause {
     display:flex;
     align-items:center;
@@ -210,18 +177,31 @@ text-align: center;
 .buch {
     display:flex;
     align-items:center;
+    width:8px;
     justify-content:center;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    <!--box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+     rgba(0, 0, 0, 0.22) 0px 10px 10px;-->
 }
-.ramka{
 
-        width:100%;
-        height:68vh;
-
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+.buch:hover{
+  border: 1px groove white;
+cursor:pointer;
 }
+
+.ramka {
+  width: 95%;
+  height: 70vh;
+  margin-top: 10px;
+  margin-left: 16px;
+  border: 2px groove white;
+  border-radius: 4px;
+  background-image: url("arc/vidrio1.jpg");
+  background-size: cover;
+  background-color: #f7ecd9;
+  box-shadow: rgba(0,0,0,0.25) 0px 14px 28px,
+              rgba(0,0,0,0.22) 0px 10px 10px;
+}
+
 .texto{
 
 height: auto;
@@ -252,7 +232,7 @@ word-wrap:normal;
 
 <section>
 
-    <header class="header" style="background-color:#f9f6f2;">
+    <header class="header" style="background-color:#f9f6f2;margin-left:4px;">
         <!--e6e2d8,F1ECD9-->
             <h1></h1>
             <p class="ersterTitel">Ipad Seite</p>
@@ -265,11 +245,11 @@ word-wrap:normal;
     <hr/>
 
 
-    <nav class="nav" style="background-color:#efefef;
+    <nav class="nav" style="background-color:var(--colorNav);;
                 display:flex;
-                align-items:center;align-content:center;">
+                align-items:center;align-content:center;border: 1px groove green;">
 
-        <div class="hause" style="background-color:Cornsilk;">   <!--home, bars-->
+        <div class="hause" style="background-color:var(--colorNav);">   <!--home, bars-->
                 <div class="dropdown">
                 <button id="menuButton" style="margin-left:8px;" onclick="myFunction()" class="dropbtn">
                 <i class='fas fa-bars'
@@ -289,14 +269,23 @@ word-wrap:normal;
         </div>   <!--home, bars-->
 
 
-        <div class="buch" style="background-color:Cornsilk;">
+        <div class="buch" style="background-color:var(--colorNav);">
             <i class="fas fa-book-open reader" style="font-size:20px;color:blue;
-            background-color:#efefef;cursor:pointer;"></i>
+            background-color:var(--colorNav);cursor:pointer;"></i>
         </div>
-        <div style="background-color:khaki;"></div>
-        <div style="background-color:AntiqueWhite;"></div>
-        <div style="background-color:lightgrey;"></div>
-        <div style="background-color:lightgrey;">🍀</div>
+        <div style="background-color:blue;"></div>
+        <div style="background-color:blue;"></div>
+        <div style="background-color:blue;"></div>
+<!--        <div style="background-color:var(&#45;&#45;colorNav);"></div>-->
+
+        <div id="pageNumber" style="display:flex; width:26px;height:30px;
+             border-style:groove; border-radius:6px; border-color:#ebcc34;
+            color:white;background-color:blue; margin-right:8px;";>
+              <p style="margin-left:14px;text-indent:8px;
+              font-family:Arial; font-size:14px;background-color:white;"> p:</p>1
+        </div>
+            <div style="background-color:red;">
+             </div>
     </nav>
 <hr/>
 
@@ -305,12 +294,13 @@ word-wrap:normal;
 
 <hr/>
 <br/>
-<iframe class="ramka" src="arc/Einleitung.html" name="iframe_a"  title="Iframe Example"></iframe>
+<iframe id ="myIFrame" class="ramka" src="arc/Einleitung.html" name="iframe_a"  title="Iframe Example"></iframe>
 
 
 <script>
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById('pageNumber').textContent ='p '+ "1";
 }
 
 // Close the dropdown if the user clicks outside of it
@@ -327,6 +317,53 @@ window.onclick = function(event) {
   }
 }
 </script>
+<!--counter-->
+<!-- limpio pageNumber    -->
+<script>
+document.getElementById('pageNumber').textContent ='p '+ "1";
+ </script>
+
+ <!-- limpio pageNumber    -->
+
+     <script>
+    const iframe = document.getElementById('myIFrame');
+    const pageNumber = document.getElementById('pageNumber');
+    const lineHeight =30;
+    const linesPerPage = 46;
+
+      iframe.onload = () => {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+        iframeDoc.addEventListener('scroll', (event) => {
+          const scrollTop = iframeDoc.documentElement.scrollTop ||
+                  iframeDoc.body.scrollTop;
+          const page =Math.floor(scrollTop / (linesPerPage*lineHeight))+1;
+          pageNumber.textContent = ' '+' p: ' + page;
+
+        })
+      }
+
+</script>
+
+<!-- ... agrega esto por si sales del programa -->
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+    const textoContainer = document.getElementById('myIFrame');
+    const pageNumber = document.getElementById('pageNumber');
+
+    const linesPerPage = 30;
+    const lineHeight = 20;
+
+    textoContainer.addEventListener('scroll', () => {
+        const scrollTop = textoContainer.scrollTop;
+        const page = Math.floor(scrollTop / (linesPerPage * lineHeight)) + 1;
+        pageNumber.textContent = ' '+'p: ' + page;
+    });
+});
+</script>
+
+<!--counter-->
+
 
 <footer class="footer" style="background-color:#E1DBCB;">
           <div style=";border-top:2px;">
@@ -339,7 +376,9 @@ window.onclick = function(event) {
             <!-- border-style:solid;border-width:1px;border-color:black;-->
           </div>
             <div style="padding-left:2px;">
-                <span style="color:green;">Ipad</span>
+
+
+<!--                <span style="color:green;">Ipad</span>-->
             </div>
        <div style="padding-left:120px;;align-items:right;">  <!-- #f1ecd9;-->
         <img id="bigornia" src="arc/BigPerf22.png"

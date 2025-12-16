@@ -27,17 +27,29 @@
      --colorX: #e7e3d4;
      --colorHeader:#fcf5c7;
      --colorNav:#FAEBD7; /* #FAF0E6; */
+     --bodyColor:#fdf5e0;
      }
+
 
 
     * {
   box-sizing: border-box;
-    }
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bodyColor);
+}
 
 .header {
   display:flex;
   background-color: var(--colorX);
   margin-top:4px;
+  margin-right:8px;
   padding-top: 4px;
   text-align: center;
   height:14vh;
@@ -47,6 +59,7 @@
 .nav{
 display:flex;
 margin-left:4px;
+margin-right:8px;
  height:8vh;
  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 background-color: var(--colorNav);
@@ -192,7 +205,8 @@ cursor:pointer;
   width: 95%;
   height: 70vh;
   margin-top: 10px;
-  margin-left: 16px;
+  margin-left: 12px;
+  margin-right:8px;
   border: 2px groove white;
   border-radius: 4px;
   background-image: url("arc/vidrio1.jpg");
@@ -228,17 +242,21 @@ word-wrap:normal;
 </head>
 
 
-<body style="background-color:#f0f0e9;">
+<body style="background-color:var(--bodyColor);">
 
 <section>
 
     <header class="header" style="background-color:#f9f6f2;margin-left:4px;">
         <!--e6e2d8,F1ECD9-->
-            <h1></h1>
-            <p class="ersterTitel">Ipad Seite</p>
+           <img src="arc/cieloH22.jpg" width="1000px" height="120px" alt="cielo"
+  style="display: block, margin: auto">
+
+ <!--           <p class="ersterTitel">Ipad Seite</p>
              <p class="epigrafe"><i>María Papel era así:
      prefería arrancarse una espina del corazón,
      a que arrancarse una idea del corazón.</i></p>
+        -->
+
     </header>
 <br/>
 
@@ -278,11 +296,11 @@ word-wrap:normal;
         <div style="background-color:blue;"></div>
 <!--        <div style="background-color:var(&#45;&#45;colorNav);"></div>-->
 
-        <div id="pageNumber" style="display:flex; width:26px;height:30px;
+        <div id="pageNumber" style="width:28px;height:30px;
              border-style:groove; border-radius:6px; border-color:#ebcc34;
-            color:white;background-color:blue; margin-right:8px;";>
-              <p style="margin-left:14px;text-indent:8px;
-              font-family:Arial; font-size:14px;background-color:white;"> p:</p>1
+            color:white;background-color:#689bb3;margin-left:2px; ">
+              <p style="padding-left:2px;text-align:left;
+              font-family:Arial; font-size:10px;background-color:white;"> p:1</p>
         </div>
             <div style="background-color:red;">
              </div>
@@ -320,7 +338,7 @@ window.onclick = function(event) {
 <!--counter-->
 <!-- limpio pageNumber    -->
 <script>
-document.getElementById('pageNumber').textContent ='p '+ "1";
+document.getElementById('pageNumber').textContent ='  p: '+ "1";
  </script>
 
  <!-- limpio pageNumber    -->
@@ -338,7 +356,7 @@ document.getElementById('pageNumber').textContent ='p '+ "1";
           const scrollTop = iframeDoc.documentElement.scrollTop ||
                   iframeDoc.body.scrollTop;
           const page =Math.floor(scrollTop / (linesPerPage*lineHeight))+1;
-          pageNumber.textContent = ' '+' p: ' + page;
+          pageNumber.textContent = '  '+' p: ' + page;
 
         })
       }
@@ -402,8 +420,9 @@ window.addEventListener('DOMContentLoaded', () => {
     imagen.addEventListener('mousedown', () => {
       imagen.style.opacity = '0.1'; // Desvanecer lentamente
        document.getElementById('fenster').innerHTML= "Voiguevoe förlag, 2025.<br/>"
-       //©ISBN 978-91-639-4401-7\";
-       //venuskreis@icloud.com;\"
+
+        //console.log("screenW ist= ", screen.width);
+       //console.log("screenH ist= ",screen.height);
 
     });
 
@@ -444,3 +463,4 @@ return dias[day]+ " "+ dayNr +" "+"de"+" "+meses1[mesNr]+". "+"Año "+anno;
 
 </body>
 </html>
+

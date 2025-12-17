@@ -58,6 +58,9 @@ body, html {
 }
 .nav{
 display:flex;
+<!--justify-content: space-around;
+justify-content: space-between;-->
+justify-content: space-evenly;
 margin-left:4px;
 margin-right:8px;
  height:8vh;
@@ -260,7 +263,8 @@ word-wrap:normal;
     </header>
 <br/>
 
-    <hr/>
+    <hr style="border:2px;background-color:green;color:green;style= margin-left:4px;
+margin-right:8px;"/>
 
 
     <nav class="nav" style="background-color:var(--colorNav);;
@@ -271,7 +275,7 @@ word-wrap:normal;
                 <div class="dropdown">
                 <button id="menuButton" style="margin-left:8px;" onclick="myFunction()" class="dropbtn">
                 <i class='fas fa-bars'
-                style='font-size:20px;color:blue; style="background-color:Cornsilk;
+                style='font-size:34px;color:#3c7dc8; style="background-color:Cornsilk;
                '></i>
                 </button>
             <br/>
@@ -288,29 +292,37 @@ word-wrap:normal;
 
 
         <div class="buch" style="background-color:var(--colorNav);">
-            <i class="fas fa-book-open reader" style="font-size:20px;color:blue;
+            <i class="fas fa-book-open reader" style="font-size:34px;color:#3c7dc8;
             background-color:var(--colorNav);cursor:pointer;"></i>
         </div>
         <div style="background-color:blue;"></div>
-        <div style="background-color:blue;"></div>
-        <div style="background-color:blue;"></div>
-<!--        <div style="background-color:var(&#45;&#45;colorNav);"></div>-->
+        <div style="background-color:var(--colorNav);width:28px;height:34px;"></div>
+<!--        <div style="background-color:blue;"></div>-->
 
-        <div id="pageNumber" style="width:28px;height:30px;
+        <div id="pageNumber" style="width:28px;height:34px;margin-right:4px;
              border-style:groove; border-radius:6px; border-color:#ebcc34;
             color:white;background-color:#689bb3;margin-left:2px; ">
               <p style="padding-left:2px;text-align:left;
               font-family:Arial; font-size:10px;background-color:white;"> p:1</p>
         </div>
-            <div style="background-color:red;">
-             </div>
+<!--            <div style="background-color:red;">-->
+<!--             </div>-->
     </nav>
-<hr/>
+<hr style="margin-left:4px;
+margin-right:8px;"/>
+ <hr style="margin-left:4px;
+margin-right:8px;"/>
+
+  <p id="fenster0" style="font-family: 'Sofia', sans-serif;
+    color:#225099;
+    font-size:14px;">María Papel era así: prefería arrancarse una espina del corazón, a que arrancarse una idea del corazón.</p>
 
 </section>
-        <hr style="border:2px;background-color:green;color:green;"/>
+        <hr style="border:2px;background-color:green;color:green;style= margin-left:4px;
+margin-right:8px;"/>
 
-<hr/>
+<hr style="border:2px;background-color:green;color:green;style= margin-left:4px;
+margin-right:8px;"/>
 <br/>
 <iframe id ="myIFrame" class="ramka" src="arc/Einleitung.html" name="iframe_a"  title="Iframe Example"></iframe>
 

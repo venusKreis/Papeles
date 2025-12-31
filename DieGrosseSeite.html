@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|emboss" />
     <script src='https://kit.fontawesome.com/19cb54bd6e.js' crossorigin='anonymous'></script>
-    <title>Exp256Sauber</title>
+    <title>DieGrosseSeite</title>
 
 <!--sigo sin cambiar iframe-->
     <style>
@@ -29,7 +29,9 @@ body{
   --anchoBody:1000px;
 - --cafeLeche: #d8C3A5;             /*container*/
   --bodyColor: #A4B3B6;
-  --verdeObs:#576777;
+  --verdeObs:#3d4d4b;
+
+<!--  576777;-->
 
 }
 
@@ -125,13 +127,13 @@ resize:both;       /*Gut!*/
 }
 
 
-li:hover{
+ li:hover{
  ::after {
         content: attr(data-item);
         background:transparent
        font-family: "Arial", "Baskerville", sans-serif;
         font-size:12px;
-	 	font-weight:lighter;
+        font-weight:lighter;
         text-transform: lowercase;
         color: #d6990b;
         }
@@ -254,9 +256,11 @@ border: 1px solid rgba(255,255,255,0.4);
   overflow-y:scroll;
   z-index: 1;
 }
-		
-#bigornia {
+ #bigornia {
+    cursor:pointer;
       height: auto;
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
       transition: opacity 0.8s ease;
     }
     </style>
@@ -287,13 +291,20 @@ border: 1px solid rgba(255,255,255,0.4);
                     padding-top:4px;padding-left:1px;background-color:white" >
              </button>
 
+
+<!-- INIT-->
+
+
 <script>
 let veces = 0;
 
 function hauptMenu55() {
+
+
     const n = document.getElementById("num");
     const ikon = document.getElementById("menuIkon");
-	const sh = document.getElementById("ikono1");
+    const sh = document.getElementById("ikono1");
+
 
     const x = document.getElementById("listaRel");
     const y = document.getElementById("listaCV");
@@ -310,13 +321,15 @@ function hauptMenu55() {
 
     // Mostrar el correspondiente
 
-	if(ggr === 1){
+    //alert("ggr= "+ggr)
+        if(ggr === 1){
         const ff = document.getElementById("fenster");
          ggr = 0;
         sh.src = "user(22)-64.jpg";
         ff.innerHTML = " ";
         }
-	
+
+
     switch (veces) {
         case 1:
             x.style.display = "block";
@@ -333,7 +346,7 @@ function hauptMenu55() {
             n.innerHTML = "2";
             ikon.style.color = '#bd261e';
             ifr.src = "vk/proemio.html";
-			fenster.style.backgroundImage = "url('vk/Omslag44Web.jpg')";
+            fenster.style.backgroundImage = "url('vk/Omslag44Web.jpg')";
             break;
         case 3:
             z.style.display = "block";
@@ -343,10 +356,16 @@ function hauptMenu55() {
 
             ifr.src = "arc/Einleitung.html";
             fenster.style.backgroundImage = "url('arc/MP6.jpg')";
-			antwort = true;
-
+            antwort = true;
             break;
     }
+}
+//------------------
+function renFunction(){
+        const ff = document.getElementById("fenster");
+       ggr = 0;
+      ikon.src = "user(22)-64.jpg";
+      ff.innerHTML = " ";
 }
 		//achtung!
 // 🚀 Al cargar la página, activar el primer menú
@@ -423,7 +442,8 @@ if((x.style.display === "none")){         //si MP no se ve
         1</p>
 
 
-<img id="bigornia" style="width:34px;height:34px;margin-left:40px;margin-top:10px;cursor:pointer;" src="BigPerf22.png" alt="Big">
+<img id="bigornia" style="width:28px;height:28px;margin-left:40px;margin-top:10px;
+cursor:pointer;" src="BigPerf22.png" alt="Big">
 
         </div>
 <!-- ---------------------------------------->
@@ -444,15 +464,14 @@ if((x.style.display === "none")){         //si MP no se ve
     imagen.addEventListener('mousedown', desvanecer);
     imagen.addEventListener('mouseup',restaurar);
     imagen.addEventListener('mouseleave',restaurar)
-     //pantallás dáctiles
+
     imagen.addEventListener('touchstart', desvanecer);
     imagen.addEventListener('touchend',restaurar);
     imagen.addEventListener('touchcancel',restaurar)
 
   </script>
+<!-- ---------------------------------------->
 
-
-<!-- ---------------------------------------->			
  <script>
 let rep= 0;  //
 
@@ -509,7 +528,7 @@ return dias[day]+ " "+ dayNr +" "+"de"+" "+meses1[mesNr]+" "+anno;
                     text-align:left;display:none;font-family:Georgia, Times, 'Times New Roman', serif, Arial, sans-serif;
                     font-size:18px; line-height:194%;color:green;display:block;">
 
-                     <li ><a id = "rel0_" href="rel/intro.html" target="iframe_a">introducción</a></li>
+                        <li ><a id = "rel0_" href="rel/intro.html" target="iframe_a">introducción</a></li>
                         <li ><a id = "rel1_" href="rel/PatosSilvestres.html" target="iframe_a" data-item="  10p">Patos silvestres</a></li>
                         <li><a  href="rel/Navidad.html" target="iframe_a" data-item="  4p">Navidad</a></li>
                         <li><a  id = "rel3_" href="rel/HijoDeCeniza.html" target="iframe_a" data-item="  10p">Hijo de ceniza</a></li>
@@ -529,13 +548,13 @@ return dias[day]+ " "+ dayNr +" "+"de"+" "+meses1[mesNr]+" "+anno;
 
                         <li ><a id="vkr0_" href="vk/proemio.html" target="iframe_a">Proemio</a></li>
                         <li ><a id="vkr1_" href="vk/Miguel.html" target="iframe_a" data-item="   16p">Miguel</a></li>
-                        <li><a  id="vkr2_" href="vk/DonHermenegildo.html" target="iframe_a" data-item="   16p">Desengaño</a></li>
+                        <li><a  id="vkr2_"  href="vk/DonHermenegildo.html" target="iframe_a" data-item="   16p">Desengaño</a></li>
                         <li ><a id="vkr3_"  href="vk/DonaGertrudis.html" target="iframe_a" data-item="   22p">Doña Gertrudis</a></li>
                         <li><a  id="vkr4_"  href="vk/IglesiaSanJose.html" target="iframe_a" data-item="   25p">Iglesia San José</a></li>
                         <li><a  id="vkr5_"  href="vk/DonGaleano.html" target="iframe_a" data-item="   33p">Don Galeano</a></li>
-                        <li><a  href="vk/Valladares.html" target="iframe_a" data-item="   10p">Valladares</a></li>
-                        <li><a  href="vk/LoEspejo.html" target="iframe_a" data-item="   15p">Lo Espejo</a></li>
-                        <li><a  href="vk/LosDeseos.html" target="iframe_a" data-item="   15p">Los deseos...</a></li>
+                        <li><a  id="vkr6_" href="vk/Valladares.html" target="iframe_a" data-item="   10p">Valladares</a></li>
+                        <li><a  id="vkr7_" href="vk/LoEspejo.html" target="iframe_a" data-item="   15p">Lo Espejo</a></li>
+                        <li><a  id="vkr8_" href="vk/LosDeseos.html" target="iframe_a" data-item="   15p">Los deseos...</a></li>
                         <li><a  href="vk/Penailillo.html" target="iframe_a" data-item="   28p">Peñailillo...</a></li>
                     </ul>
 
@@ -575,14 +594,17 @@ const fondos = {
   "rel1_": "url('rel/ZweiEnten.jpg')",
    "rel3_": "url('rel/baby.jpg')",
    "rel4_": "url('rel/motorcycle.jpg')",
-  "rel8_": "url('rel/avion3.png')",
-  "rel12": "url('rel/Geist_1.jpg')",
-  "vkr0_": "url('vk/Omslag44Web.jpg')",
-  "vkr1_": "url('vk/DieSache2.jpg')",
-  "vkr2_": "url('vk/OmsBok2.jpg')",
-  "vkr3_": "url('vk/Diablo3.jpg')",
-  "vkr4_": "url('vk/Diablo1.jpg')",
-  "vkr5_": "url('vk/UrodelaSin.jpg')",
+   "rel8_": "url('rel/avion3.png')",
+   "rel12": "url('rel/Geist_1.jpg')",
+   "vkr0_": "url('vk/Omslag44Web.jpg')",
+   "vkr1_": "url('vk/DieSache2.jpg')",
+   "vkr2_": "url('vk/OmsBok2.jpg')",
+   "vkr3_": "url('vk/Diablo3.jpg')",
+   "vkr4_": "url('vk/Diablo1.jpg')",
+   "vkr5_": "url('vk/UrodelaSin.jpg')",
+   "vkr6_": "url('vk/omslag433.jpg')",
+   "vkr7_": "url('vk/Yzaguirre77.jpg')",
+   "vkr8_": "url('vk/quetzal44.jpg')",
   "cap0_": "url('arc/MP6.jpg')",
   "cap1_": "url('arc/Vogel_4.jpg')",
   "cap2_": "url('arc/ImRegen3.jpg')",
@@ -634,9 +656,12 @@ items.forEach(item => {
               " title="Iframe Example"></iframe>t
             </div>
 
+                    <!-- font-size:   2vh   -->
+            </span>
             <div class="sieben" style="background-color:#d8C3A5;
                         height:96%;;margin-left:8px;; padding-left:4px;margin-top:30px;
                         color:#c0d5f0;border:hidden;">
+
             </div>
 
             <div id="fenster" class="fenster" style="color:darkslategrey;
@@ -695,7 +720,6 @@ function hauptInfo() {
 
     }
 }
-
 </script>
 
 <!-- limpio pageNumber    -->

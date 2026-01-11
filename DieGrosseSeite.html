@@ -29,7 +29,8 @@ body{
   --anchoBody:1000px;
 - --cafeLeche: #d8C3A5;             /*container*/
   --bodyColor: #A4B3B6;
-  --verdeObs:#3d4d4b;
+  --verdeObs:#24302f;
+  --userColor:#FCF5E2;
 
 <!--  576777;-->
 
@@ -160,7 +161,7 @@ height:50%;
 
 
 .element5{
-background-color:#1e7296;
+<!--background-color:#1e7296;-->
 color:#55558a;
 grid-row-start: 1;
 grid-row-end: 2;
@@ -195,7 +196,7 @@ margin-top:10px;
     text-align:center;
 }
 .btn {
-  background-color: white;
+  background-color: #fcf5e2;;
   border: none;
 <!--  padding: 16px 32px;-->
   text-align: center;
@@ -219,9 +220,6 @@ margin-top:10px;
     width:34px;
     height:36px;
     margin-top:2px;
-    /*border: 1px solid white;*/
-    background-color: #1e7296;
-
 }
 
 #bucher {
@@ -273,22 +271,24 @@ border: 1px solid rgba(255,255,255,0.4);
 
 
         <div class="container" style="background-color:#d8C3A5;">
-        <div class="element5" id="info5" style="display:flex; background-color:
-                white; margin-bottom:2px; padding-left:20px;
+        <div class="element5" id="info5" style="display:flex;
+                margin-bottom:2px; padding-left:20px;background-color:var(--userColor);
                 padding-top:10px;text-align:left;
                 width:96%;overflow:hidden">
 
-           <button  class="btn"  id="mpLista" onclick="hauptMenu55()"><i class='fas fa-bars' id = "menuIkon"
-                style="font-size:34px;color:blue; padding-top:10px;outline:none;margin-bottom:10px;
+           <button  class="btn"  id="mpLista"  style="background-color:#fcf5e2;" onclick="hauptMenu55()">
+
+               <i class='fas fa-bars' id = "menuIkon"
+                style="font-size:34px;background-color:var(--userColor);color:blue; padding-top:10px;outline:none;margin-bottom:10px;
                 margin-right:4px; cursor:pointer;
              ;"></i></button>
 
 
-             <button id ="usuario" onclick = "hauptInfo()" style="background-color:white;
+             <button id ="usuario" onclick = "hauptInfo()" style="background-color:var(--userColor);
         border:none;cursor:pointer;">
                <img class = "ikonUser"  id = "ikono1" src="user(22)-64.jpg" alt="usu"
                     style="width:26px; height:26px;
-                    padding-top:4px;padding-left:1px;background-color:white" >
+                    padding-top:4px;padding-left:1px;background-color:#FCF5E2;" >
              </button>
 
 
@@ -395,7 +395,7 @@ if((x.style.display === "none")){         //si MP no se ve
 
 
 <button  onclick="pluma()" style=" border-style: none;margin-left:20px;background-color:
-                white;" ><i class="fas fa-book-open reader"
+                var(--userColor);" ><i class="fas fa-book-open reader"
     style="font-size:34px;color:blue;margin-top:6px; cursor:pointer;"></i></button>
 
             <p class="pluma-content" id="bucher" style="display:'none'">
